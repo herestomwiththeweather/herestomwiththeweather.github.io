@@ -6,32 +6,32 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Jekyll-IndieWeb
-email: your-email@domain.com
-description: A Jekyll quick start to getting up and going with the indieweb.
+title: HeresTomWithTheWeather
+email: herestomwiththeweather@gmail.com
+description: mostly about Internet and ice hockey
 # Webmentions - leave blank (remove "yes") if you would not like to receive & display webmentions from other sites
 webmentions: 
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
-instagram_username: jekyll
-flickr_username: jekyll
-foursquare_username:
+url: "https://herestomwiththeweather.com" # the base hostname & protocol for your site
+twitter_username: tomwiththeweath
+github_username: herestomwiththeweather
+#instagram_username: jekyll
+flickr_username: tbbrown
+#foursquare_username:
 # Tumblr URL
-tumblr_url: http://tumblr.com
+#tumblr_url: http://tumblr.com
 # Linkedin profile URL - Expecting a full url, not username
-linkedin_url: http://linkedin.com
+#linkedin_url: http://linkedin.com
 # Facebook profile URL - Expecting a full url, not username
-facebook_url: http://facebook.com
+#facebook_url: http://facebook.com
 
 
 # Can be over ridden with author: in Front Matter
-author: Your Name
+author: Tom
 
 # Expecting a full url, not relative to site.url
-author_img: https://avatars3.githubusercontent.com/u/3083652
+author_img: https://avatars2.githubusercontent.com/u/16299?v=3&s=460
 
 # Build settings
 markdown: kramdown
