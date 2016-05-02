@@ -5,60 +5,162 @@
     <description>mostly about Internet and ice hockey</description>
     <link>https://herestomwiththeweather.com/</link>
     <atom:link href="https://herestomwiththeweather.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 01 May 2016 21:52:26 -0500</pubDate>
-    <lastBuildDate>Sun, 01 May 2016 21:52:26 -0500</lastBuildDate>
+    <pubDate>Mon, 02 May 2016 01:19:33 -0500</pubDate>
+    <lastBuildDate>Mon, 02 May 2016 01:19:33 -0500</lastBuildDate>
     <generator>Jekyll v3.0.2</generator>
     
       <item>
-        <title>Welcome to Jekyll-Indieweb</title>
-        <description>&lt;p&gt;Welcome to Jekyll-Indieweb. The goal of this project was to provide someone without a web presence a quick and easy way to start using the basics of the &lt;a href=&quot;https://indiewebcamp.com&quot;&gt;Indieweb&lt;/a&gt;.&lt;/p&gt;
+        <title>Ethereum Contract Update</title>
+        <description>&lt;p&gt;Getting up and running with &lt;a href=&quot;https://www.ethereum.org&quot;&gt;Ethereum&lt;/a&gt; on Ubuntu Trusty has been fairly painless thanks to the &lt;a href=&quot;https://github.com/ConsenSys/truffle&quot;&gt;truffle&lt;/a&gt; development environment. The &lt;a href=&quot;https://www.youtube.com/watch?v=GPP6uAq15d8&quot;&gt;HOWTO: Building Ethereum Apps With Truffle&lt;/a&gt; is a good introduction but a few details, like directory layout, have changed since then.&lt;/p&gt;
 
-&lt;p&gt;Currently supported are microformats, including an author h-card on the home page. Social media links are configurable in &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;. Where applicable, fill in either your profile link or nick name for each profile you wold like to link to. Remember, empty values will not show up in the h-card.&lt;/p&gt;
+&lt;p&gt;At &lt;a href=&quot;http://www.meetup.com/Austin-Ethereum-Meetup/events/228452105&quot;&gt;the most recent Austin Ethereum meetup&lt;/a&gt; we had a conversation about how to handle the contingency of when you need to update your “&lt;a href=&quot;https://medium.com/@ConsenSys/unpacking-the-term-smart-contract-e63238f7db65#.q6szg6xr5&quot;&gt;contract&lt;/a&gt;” which has already been deployed to the blockchain. Using “contract” as the term for the main class makes the discussion of updating such code more difficult than it should be. Code often needs to be updated for new features or fixing bugs.&lt;/p&gt;
 
-&lt;p&gt;Also configurable is whether or not you would like to receive &lt;a href=&quot;https://indiewebcamp.com/Webmention&quot;&gt;webmentions&lt;/a&gt; on your posts. Leave &lt;code class=&quot;highlighter-rouge&quot;&gt;webmentions:&lt;/code&gt; blank. The built in support is for Voxpelli’s &lt;a href=&quot;https://webmention.herokuapp.com&quot;&gt;webmention end point&lt;/a&gt;. Simply register with the service and set the configuration to &lt;strong&gt;yes&lt;/strong&gt;. Read further in the wiki about webmetnions.&lt;/p&gt;
+&lt;p&gt;For instance, it is important to check (as mentioned in &lt;a href=&quot;https://chriseth.github.io/notes/talks/safe_solidity/#/7&quot;&gt;How to Write Safe Smart Contracts&lt;/a&gt; and &lt;a href=&quot;http://solidity.readthedocs.org/en/latest/types.html#address&quot;&gt;Address types&lt;/a&gt;) the return value of send().&lt;/p&gt;
 
-&lt;p&gt;Currently there isn’t a simple method for sending webmentions with static blogs, especially hosted on GitHub, but as soon as a solution is in place, I will update this project. If you are adventurous, feel free to ping me in the  IRC channel and I can share my method.&lt;/p&gt;
+&lt;p&gt;The “King of the Ether Throne” &lt;a href=&quot;http://www.kingoftheether.com/postmortem.html&quot;&gt;post-mortem&lt;/a&gt; shares the unenviable experience of not doing this check. The offending solidity code was&lt;/p&gt;
 
-&lt;p&gt;Finally, I attempted to make the &lt;em&gt;design&lt;/em&gt; of this project as un-opinionated as I could, but maintain an aesthetic that someone just starting out would comfortable with and still be able to easily customize.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;currentMonarch.etherAddress.send(compensation);&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;Visit the &lt;a href=&quot;https://github.com/miklb/jekyll-indieweb&quot;&gt;GitHub repo to get started&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In this particular case, send() was failing because the destination address was a contract address (an Ethereum Mist “contract-based wallet”) and the default 2300 gas supplied by send() was insufficient for the destination contract to run. So, their &lt;a href=&quot;https://github.com/kieranelby/KingOfTheEtherThrone/commit/120f5a20b17600154ecb11ca120ec0dc296f66d5#diff-05a7e7e015bed68b1fcc05cd0b5c680dR209&quot;&gt;fix&lt;/a&gt; was to define a new sendWithGas() function which allows extra gas to be sent and returns a boolean like send():&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;//Unfortunately destination.send() only includes a stipend of 2300 gas, which&lt;/p&gt;
+
+  &lt;p&gt;//isn’t enough to send ether to some wallet contracts - use this to add more.&lt;/p&gt;
+
+  &lt;p&gt;function sendWithGas(address destination, uint256 value, uint256 extraGasAmt) internal returns (bool)&lt;/p&gt;
+
+  &lt;p&gt;{&lt;/p&gt;
+
+  &lt;p&gt;return destination.call.vaule(value).gas(extraGasAmt)();&lt;/p&gt;
+
+  &lt;p&gt;}&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Now, the sendWithGas() return value is stored in a payment status and if that status is failure, the operation is cancelled with prior state restored.&lt;/p&gt;
+
+&lt;p&gt;Now, they just need to update their contract!&lt;/p&gt;
 </description>
-        <pubDate>Sun, 10 Apr 2016 00:00:00 -0500</pubDate>
-        <link>https://herestomwiththeweather.com/2016/04/10/welcome-to-jekyll-indieweb.html</link>
-        <guid isPermaLink="true">https://herestomwiththeweather.com/2016/04/10/welcome-to-jekyll-indieweb.html</guid>
+        <pubDate>Sat, 27 Feb 2016 11:22:00 -0600</pubDate>
+        <link>https://herestomwiththeweather.com/2016/02/27/ethereum-contract-update.html</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2016/02/27/ethereum-contract-update.html</guid>
         
-        <category>indieweb</category>
-        
-        <category>Jekyll</category>
+        <category>ethereum</category>
         
         
       </item>
     
       <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+        <title>IIW21</title>
+        <description>&lt;p&gt;The “Rebooting the Web of Trust” session by Christopher Allen at Internet Identity Workshop 21 was a nice summary of the submissions (the price of attendance) for an upcoming conference. Not only are the &lt;a href=&quot;https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust&quot;&gt;papers&lt;/a&gt; on Github but also &lt;a href=&quot;https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust/issues&quot;&gt;issues&lt;/a&gt; are discussed.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 28 Oct 2015 11:08:59 -0500</pubDate>
+        <link>https://herestomwiththeweather.com/2015/10/28/iiw21.html</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2015/10/28/iiw21.html</guid>
+        
+        <category>identity</category>
+        
+        <category>iiw</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>IETF92</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/tbbrown/16300309883&quot;&gt;&lt;img src=&quot;https://farm8.staticflickr.com/7615/16300309883_e8a4119168.jpg&quot; alt=&quot;Hannes&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;Two weeks ago, I attended a day of sessions at IETF92 in Dallas. At the &lt;a href=&quot;https://youtu.be/Sxg-Xi6c7VU&quot;&gt;newcomer’s orientation&lt;/a&gt;, the IETF’s practice of measuring rough consensus with humming rather than a show of hands was covered. &lt;a href=&quot;http://en.wikipedia.org/wiki/Scott_Bradner&quot;&gt;Scott Bradner&lt;/a&gt; explained that this accommodates the contigency of an employee of a company wanting to comfortably express preference for a view inconsistent with the view of the employee’s boss (an example of where anonymity is important). This assumes that there is enough people in the room to stay anonymous. However, I noticed that for trivial or non-controversial issues, a show of hands was used.&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;The remote participation tools for IETF are impressive and it was cool to see this in action. The media archives of past events is also a great resource. Here is the &lt;a href=&quot;http://www.ietf.org/proceedings/92/oauth.html&quot;&gt;media for the OAuth session&lt;/a&gt; I attended.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 08 Apr 2015 11:28:16 -0500</pubDate>
+        <link>https://herestomwiththeweather.com/2015/04/08/ietf92.html</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2015/04/08/ietf92.html</guid>
+        
+        <category>ietf</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Data and Goliath</title>
+        <description>&lt;p&gt;Yesterday, Democracy Now! &lt;a href=&quot;http://www.democracynow.org/2015/3/13/data_and_goliath_bruce_schneier_on&quot;&gt;interviewed Bruce Schneier&lt;/a&gt; for his book &lt;a href=&quot;https://www.schneier.com/book-dg.html&quot;&gt;Data and Goliath&lt;/a&gt;. The book includes a footnote to the informative &lt;a href=&quot;http://confabulator.blogspot.com/2012/11/analysis-of-brightest-flashlight-free.html&quot;&gt;Analysis of Brightest Flashlight Free for Android&lt;/a&gt; in his “Business of Surveillance” chapter. Schneier notes that “the app started collecting and sending location information even before people clicked” accept on the license agreement. The FTC “didn’t fine the company, though, because the app was free.” More than 50 million users have downloaded the malware on the various app stores.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;What is appalling is how often media coverage completely misunderstands the concept of consent with cases like this, Superfish and the Facebook Experiment. A typical example is &lt;a href=&quot;http://www.theguardian.com/technology/2014/oct/03/android-flashlight-apps-permissions-privacy&quot;&gt;this Guardian article&lt;/a&gt;:&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Are users bothered by the privacy implications of these kinds of apps? Seemingly not, judging by their popularity. Brightest Flashlight has been installed more than 50m times according to the Google Play store’s stats.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The whole point is that these companies are not disclosing to the users what they are doing to them. And so it’s the users’ fault that they’re not bothered by the transgressions?&lt;/p&gt;
+</description>
+        <pubDate>Sat, 14 Mar 2015 11:54:50 -0500</pubDate>
+        <link>https://herestomwiththeweather.com/2015/03/14/data-and-goliath.html</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2015/03/14/data-and-goliath.html</guid>
+        
+        <category>bruceschneier</category>
+        
+        <category>privacy</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Firefox Hello</title>
+        <description>&lt;p&gt;I have been playing around with &lt;a href=&quot;https://support.mozilla.org/en-US/kb/where-firefox-hello-button&quot;&gt;Firefox Hello&lt;/a&gt; today. It requires at least version 34.0.5 of Firefox. I like having a contact list in my Firefox browser to initiate WebRTC video conferences. For instance, If I am signed in to Firefox Hello, you can easily call me after adding my email as a contact. If I am not signed in, it seems you have to send me an invitation url to call me which isn’t so bad.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 15 Jan 2015 16:58:21 -0600</pubDate>
+        <link>https://herestomwiththeweather.com/2015/01/15/firefox-hello.html</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2015/01/15/firefox-hello.html</guid>
+        
+        <category>firefox</category>
+        
+        <category>webrtc</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>David&#39;s Memorial Service</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/tbbrown/451117849&quot;&gt;&lt;img src=&quot;https://farm1.staticflickr.com/173/451117849_3471b8e3d7.jpg&quot; alt=&quot;Easter&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I’m in Longview for my brother David’s memorial service. On a visit with him here in August, he showed me an online community devoted to sharing information about cancer treatment. It was a real online community that made a difference and I was very glad to see the important contributions he made.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 03 Dec 2014 09:11:28 -0600</pubDate>
+        <link>https://herestomwiththeweather.com/2014/12/03/memorial-service.html</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2014/12/03/memorial-service.html</guid>
+        
+        <category>longview</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>EFF Austin meeting</title>
+        <description>&lt;p&gt;Thanks to Stephen Torrence for &lt;a href=&quot;http://effaustin.org/2014/07/21st-century-virtual-identity-a-recording&quot;&gt;recording the EFF-Austin meeting&lt;/a&gt;. Some of the toughest questions raised after the presentation regarded digital death and Stephen &lt;a href=&quot;https://soundcloud.com/stephen-torrence/eff-austin-july-meetup-2014&quot;&gt;included some relevant links&lt;/a&gt; with the recording. Lots to think about!&lt;/p&gt;
+</description>
+        <pubDate>Fri, 25 Jul 2014 14:24:06 -0500</pubDate>
+        <link>https://herestomwiththeweather.com/2014/07/25/eff-austin-meeting.html</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2014/07/25/eff-austin-meeting.html</guid>
+        
+        <category>effaustin</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>hello pants</title>
+        <description>&lt;p&gt;hello pants!&lt;/p&gt;
 
 </description>
-        <pubDate>Wed, 03 Feb 2016 22:59:54 -0600</pubDate>
-        <link>https://herestomwiththeweather.com/jekyll/update/2016/02/03/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">https://herestomwiththeweather.com/jekyll/update/2016/02/03/welcome-to-jekyll.html</guid>
+        <pubDate>Sun, 20 Jul 2014 02:31:41 -0500</pubDate>
+        <link>https://herestomwiththeweather.com/2014/07/20/hello-pants.html</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2014/07/20/hello-pants.html</guid>
         
+        <category>pants</category>
         
-        <category>jekyll</category>
-        
-        <category>update</category>
         
       </item>
     
