@@ -15,21 +15,17 @@ For instance, it is important to check (as mentioned in [How to Write Safe Smart
 
 The “King of the Ether Throne” [post-mortem](http://www.kingoftheether.com/postmortem.html) shares the unenviable experience of not doing this check. The offending solidity code was
 
-> currentMonarch.etherAddress.send(compensation);
+	currentMonarch.etherAddress.send(compensation);
 
 In this particular case, send() was failing because the destination address was a contract address (an Ethereum Mist “contract-based wallet”) and the default 2300 gas supplied by send() was insufficient for the destination contract to run. So, their [fix](https://github.com/kieranelby/KingOfTheEtherThrone/commit/120f5a20b17600154ecb11ca120ec0dc296f66d5#diff-05a7e7e015bed68b1fcc05cd0b5c680dR209) was to define a new sendWithGas() function which allows extra gas to be sent and returns a boolean like send():
 
-> //Unfortunately destination.send() only includes a stipend of 2300 gas, which
->
-> //isn't enough to send ether to some wallet contracts - use this to add more.
->
-function sendWithGas(address destination, uint256 value, uint256 extraGasAmt) internal returns (bool)
->
-{
->
-  return destination.call.vaule(value).gas(extraGasAmt)();
->
-}
+	//Unfortunately destination.send() only includes a stipend of 2300 gas, which
+	//isn't enough to send ether to some wallet contracts - use this to add more.
+
+	function sendWithGas(address destination, uint256 value, uint256 extraGasAmt) internal returns (bool)
+	{
+	  return destination.call.vaule(value).gas(extraGasAmt)();
+	}
 
 Now, the sendWithGas() return value is stored in a payment status and if that status is failure, the operation is cancelled with prior state restored.
 

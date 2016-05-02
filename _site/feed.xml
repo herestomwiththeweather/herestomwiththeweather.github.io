@@ -5,8 +5,8 @@
     <description>mostly about Internet and ice hockey</description>
     <link>https://herestomwiththeweather.com/</link>
     <atom:link href="https://herestomwiththeweather.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 02 May 2016 01:19:33 -0500</pubDate>
-    <lastBuildDate>Mon, 02 May 2016 01:19:33 -0500</lastBuildDate>
+    <pubDate>Mon, 02 May 2016 13:28:12 -0500</pubDate>
+    <lastBuildDate>Mon, 02 May 2016 13:28:12 -0500</lastBuildDate>
     <generator>Jekyll v3.0.2</generator>
     
       <item>
@@ -19,25 +19,21 @@
 
 &lt;p&gt;The “King of the Ether Throne” &lt;a href=&quot;http://www.kingoftheether.com/postmortem.html&quot;&gt;post-mortem&lt;/a&gt; shares the unenviable experience of not doing this check. The offending solidity code was&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;currentMonarch.etherAddress.send(compensation);&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;currentMonarch.etherAddress.send(compensation);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;In this particular case, send() was failing because the destination address was a contract address (an Ethereum Mist “contract-based wallet”) and the default 2300 gas supplied by send() was insufficient for the destination contract to run. So, their &lt;a href=&quot;https://github.com/kieranelby/KingOfTheEtherThrone/commit/120f5a20b17600154ecb11ca120ec0dc296f66d5#diff-05a7e7e015bed68b1fcc05cd0b5c680dR209&quot;&gt;fix&lt;/a&gt; was to define a new sendWithGas() function which allows extra gas to be sent and returns a boolean like send():&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;//Unfortunately destination.send() only includes a stipend of 2300 gas, which&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;//Unfortunately destination.send() only includes a stipend of 2300 gas, which
+//isn&#39;t enough to send ether to some wallet contracts - use this to add more.
 
-  &lt;p&gt;//isn’t enough to send ether to some wallet contracts - use this to add more.&lt;/p&gt;
-
-  &lt;p&gt;function sendWithGas(address destination, uint256 value, uint256 extraGasAmt) internal returns (bool)&lt;/p&gt;
-
-  &lt;p&gt;{&lt;/p&gt;
-
-  &lt;p&gt;return destination.call.vaule(value).gas(extraGasAmt)();&lt;/p&gt;
-
-  &lt;p&gt;}&lt;/p&gt;
-&lt;/blockquote&gt;
+function sendWithGas(address destination, uint256 value, uint256 extraGasAmt) internal returns (bool)
+{
+  return destination.call.vaule(value).gas(extraGasAmt)();
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;Now, the sendWithGas() return value is stored in a payment status and if that status is failure, the operation is cancelled with prior state restored.&lt;/p&gt;
 

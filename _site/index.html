@@ -131,25 +131,21 @@
 
 <p>The “King of the Ether Throne” <a href="http://www.kingoftheether.com/postmortem.html">post-mortem</a> shares the unenviable experience of not doing this check. The offending solidity code was</p>
 
-<blockquote>
-  <p>currentMonarch.etherAddress.send(compensation);</p>
-</blockquote>
+<div class="highlighter-rouge"><pre class="highlight"><code>currentMonarch.etherAddress.send(compensation);
+</code></pre>
+</div>
 
 <p>In this particular case, send() was failing because the destination address was a contract address (an Ethereum Mist “contract-based wallet”) and the default 2300 gas supplied by send() was insufficient for the destination contract to run. So, their <a href="https://github.com/kieranelby/KingOfTheEtherThrone/commit/120f5a20b17600154ecb11ca120ec0dc296f66d5#diff-05a7e7e015bed68b1fcc05cd0b5c680dR209">fix</a> was to define a new sendWithGas() function which allows extra gas to be sent and returns a boolean like send():</p>
 
-<blockquote>
-  <p>//Unfortunately destination.send() only includes a stipend of 2300 gas, which</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>//Unfortunately destination.send() only includes a stipend of 2300 gas, which
+//isn't enough to send ether to some wallet contracts - use this to add more.
 
-  <p>//isn’t enough to send ether to some wallet contracts - use this to add more.</p>
-
-  <p>function sendWithGas(address destination, uint256 value, uint256 extraGasAmt) internal returns (bool)</p>
-
-  <p>{</p>
-
-  <p>return destination.call.vaule(value).gas(extraGasAmt)();</p>
-
-  <p>}</p>
-</blockquote>
+function sendWithGas(address destination, uint256 value, uint256 extraGasAmt) internal returns (bool)
+{
+  return destination.call.vaule(value).gas(extraGasAmt)();
+}
+</code></pre>
+</div>
 
 <p>Now, the sendWithGas() return value is stored in a payment status and if that status is failure, the operation is cancelled with prior state restored.</p>
 
