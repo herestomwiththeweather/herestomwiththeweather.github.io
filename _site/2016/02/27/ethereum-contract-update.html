@@ -101,7 +101,7 @@
 
 function sendWithGas(address destination, uint256 value, uint256 extraGasAmt) internal returns (bool)
 {
-  return destination.call.vaule(value).gas(extraGasAmt)();
+  return destination.call.value(value).gas(extraGasAmt)();
 }
 </code></pre>
 </div>

@@ -24,7 +24,7 @@ In this particular case, send() was failing because the destination address was 
 
 	function sendWithGas(address destination, uint256 value, uint256 extraGasAmt) internal returns (bool)
 	{
-	  return destination.call.vaule(value).gas(extraGasAmt)();
+	  return destination.call.value(value).gas(extraGasAmt)();
 	}
 
 Now, the sendWithGas() return value is stored in a payment status and if that status is failure, the operation is cancelled with prior state restored.
