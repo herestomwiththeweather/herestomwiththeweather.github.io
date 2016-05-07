@@ -10,7 +10,7 @@ title: HeresTomWithTheWeather
 email: herestomwiththeweather@gmail.com
 description: mostly about Internet and ice hockey
 # Webmentions - leave blank (remove "yes") if you would not like to receive & display webmentions from other sites
-webmentions: 
+webmentions: yes
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://herestomwiththeweather.com" # the base hostname & protocol for your site

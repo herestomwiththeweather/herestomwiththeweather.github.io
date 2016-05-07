@@ -13,6 +13,8 @@
 	<link rel="canonical" href="https://herestomwiththeweather.com/2015/01/15/firefox-hello.html">
 	<link rel="alternate" type="application/rss+xml" title="HeresTomWithTheWeather" href="https://herestomwiththeweather.com /feed.xml ">
 	
+	<link rel="webmention" href="https://webmention.herokuapp.com/api/webmention" />
+	
 	<!-- Begin Jekyll SEO tag -->
 <title>Firefox Hello - HeresTomWithTheWeather</title>
 <meta property="og:title" content="Firefox Hello" />
@@ -108,6 +110,18 @@
   
 </footer>
 </article>
+
+
+<script id="webmention-hosted">
+(function () {
+var sn = document.createElement("script"), s = document.getElementsByTagName("script")[0], url;
+url = document.querySelectorAll ? document.querySelectorAll("link[rel~=canonical]") : false;
+url = url && url[0] ? url[0].href : false;
+sn.type = "text/javascript"; sn.async = true;
+sn.src = "//webmention.herokuapp.com/api/embed?url" + encodeURIComponent(url || window.location);
+s.parentNode.insertBefore(sn, s);
+}());
+</script>
 
 
 
