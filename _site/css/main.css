@@ -88,6 +88,13 @@ a {
     color: #c60000;
     text-decoration: underline; }
 
+.footnote {
+  font-size: smaller;
+  vertical-align: super; }
+
+.footnotes ol li {
+  margin-left: 1rem; }
+
 blockquote {
   border-left: 5px solid #ccc;
   margin: 15px 0;
@@ -152,9 +159,10 @@ table {
 tr {
   border-bottom: 1px solid #ccc; }
 
-th, td {
-  text-align: left;
-  padding: 4px; }
+th,
+td {
+  padding: 4px;
+  text-align: left; }
 
 h1,
 h2,
@@ -329,26 +337,25 @@ video {
   border-right: 1px solid #ccc; }
 
 .entry-footer {
-  background: rgba(204, 204, 204, 0.1); }
-
-.entry-meta {
+  background: rgba(204, 204, 204, 0.1);
   display: flex;
   flex-direction: row;
   width: 100%; }
-  .entry-meta .h-card {
+  .entry-footer .h-card {
     flex: 0 auto;
     padding: 1rem; }
-    .entry-meta .h-card .u-photo {
+    .entry-footer .h-card .u-photo {
       border: #ccc 3px solid;
       border-radius: 50%;
+      display: block;
       height: 5rem;
       margin: auto; }
-  .entry-meta .meta-wrap {
+  .entry-footer .meta-wrap {
     font-size: 18px;
     font-size: 1.125rem;
     flex: 1;
     padding: 1rem; }
-  .entry-meta .post-date {
+  .entry-footer .post-date {
     text-transform: none; }
 
 .webmention-mention {
