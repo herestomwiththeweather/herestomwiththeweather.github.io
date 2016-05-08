@@ -8,7 +8,7 @@ I've followed along a few[ IndieWeb Camps](https://indiewebcamp.com/IWC) and obs
 
 ## Installation
 
-TODO: Describe the installation process. test1
+TODO: Describe the installation process. test2
 
 * [GitHub Pages](https://pages.github.com)
 
