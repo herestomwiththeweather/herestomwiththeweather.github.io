@@ -5,9 +5,28 @@
     <description>mostly about Internet and ice hockey</description>
     <link>https://herestomwiththeweather.com/</link>
     <atom:link href="https://herestomwiththeweather.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 07 May 2016 19:25:52 -0500</pubDate>
-    <lastBuildDate>Sat, 07 May 2016 19:25:52 -0500</lastBuildDate>
+    <pubDate>Mon, 09 May 2016 14:37:34 -0500</pubDate>
+    <lastBuildDate>Mon, 09 May 2016 14:37:34 -0500</lastBuildDate>
     <generator>Jekyll v3.0.5</generator>
+    
+      <item>
+        <title>Indieweb at IIW 22</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/tbbrown/26808132771&quot;&gt;&lt;img src=&quot;https://c4.staticflickr.com/8/7374/26808132771_531e2001d6_n.jpg&quot; alt=&quot;Indieweb&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Kevin Marks facilitated a good Indieweb discussion at the Internet Identity Workshop. See &lt;a href=&quot;http://iiw.idcommons.net/IndieWeb_Into_%E2%80%93_Own_Your_Web_Identity_/_Interoperate_with_other_people_%2B_Silos&quot;&gt;notes&lt;/a&gt;.  The next &lt;a href=&quot;http://2016.indieweb.org/&quot;&gt;Indieweb Summit&lt;/a&gt; is in Portland the weekend of June 4 &amp;amp; 5.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 09 May 2016 14:24:00 -0500</pubDate>
+        <link>https://herestomwiththeweather.com/2016/05/09/indieweb-at-iiw-22.html</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2016/05/09/indieweb-at-iiw-22.html</guid>
+        
+        <category>identity</category>
+        
+        <category>iiw</category>
+        
+        <category>indieweb</category>
+        
+        
+      </item>
     
       <item>
         <title>Ethereum Contract Update</title>

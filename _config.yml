@@ -42,3 +42,6 @@ gems:
   - jekyll-gist
 
 paginate: 5
+post:
+  template: _post.txt
+  extension: markdown
