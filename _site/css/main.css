@@ -324,8 +324,8 @@ video {
 
 @media (min-width: 990px) {
   .pagination {
-    margin-bottom: 60px;
-    border: 1px solid #ccc; } }
+    border: 1px solid #ccc;
+    margin-bottom: 60px; } }
 .pagination a,
 .pagination span {
   float: left;
@@ -337,10 +337,14 @@ video {
   border-right: 1px solid #ccc; }
 
 .entry-footer {
+  align-items: center;
   background: rgba(204, 204, 204, 0.1);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%; }
+  @media (min-width: 800px) {
+    .entry-footer {
+      flex-direction: row; } }
   .entry-footer .h-card {
     flex: 0 auto;
     padding: 1rem; }
