@@ -5,9 +5,20 @@
     <description>mostly about Internet and ice hockey</description>
     <link>https://herestomwiththeweather.com/</link>
     <atom:link href="https://herestomwiththeweather.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 28 May 2016 17:50:30 -0500</pubDate>
-    <lastBuildDate>Sat, 28 May 2016 17:50:30 -0500</lastBuildDate>
+    <pubDate>Sat, 28 May 2016 22:26:16 -0500</pubDate>
+    <lastBuildDate>Sat, 28 May 2016 22:26:16 -0500</lastBuildDate>
     <generator>Jekyll v3.0.5</generator>
+    
+      <item>
+        <title>IndieWeb 2016</title>
+        <description>&lt;p&gt;RSVP &lt;span class=&quot;p-rsvp&quot;&gt;yes&lt;/span&gt; to &lt;a href=&quot;http://2016.indieweb.org&quot; rel=&quot;in-reply-to&quot; class=&quot;u-in-reply-to&quot;&gt;IndieWeb Summit&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 28 May 2016 00:00:00 -0500</pubDate>
+        <link>https://herestomwiththeweather.com/2016/05/28/indieweb-2016.html</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2016/05/28/indieweb-2016.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Indieweb at IIW 22</title>
