@@ -5,17 +5,17 @@
     <description>mostly about Internet and ice hockey</description>
     <link>https://herestomwiththeweather.com/</link>
     <atom:link href="https://herestomwiththeweather.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 28 May 2016 23:08:10 -0500</pubDate>
-    <lastBuildDate>Sat, 28 May 2016 23:08:10 -0500</lastBuildDate>
+    <pubDate>Sun, 29 May 2016 00:18:23 -0500</pubDate>
+    <lastBuildDate>Sun, 29 May 2016 00:18:23 -0500</lastBuildDate>
     <generator>Jekyll v3.0.5</generator>
     
       <item>
         <title>IndieWeb 2016</title>
-        <description>&lt;p&gt;RSVP &lt;span class=&quot;p-rsvp&quot;&gt;yes&lt;/span&gt; to &lt;a href=&quot;http://2016.indieweb.org&quot; rel=&quot;in-reply-to&quot; class=&quot;u-in-reply-to&quot;&gt;IndieWeb Summit&lt;/a&gt;&lt;/p&gt;
+        <description>&lt;p&gt;RSVP &lt;span class=&quot;p-rsvp&quot;&gt;yes&lt;/span&gt; to &lt;a href=&quot;http://2016.indieweb.org/&quot; rel=&quot;in-reply-to&quot; class=&quot;u-in-reply-to&quot;&gt;IndieWeb Summit&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Sat, 28 May 2016 00:00:00 -0500</pubDate>
-        <link>https://herestomwiththeweather.com/2016/05/28/indieweb-2016.html</link>
-        <guid isPermaLink="true">https://herestomwiththeweather.com/2016/05/28/indieweb-2016.html</guid>
+        <link>https://herestomwiththeweather.com/2016/05/28/indieweb-2016/</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2016/05/28/indieweb-2016/</guid>
         
         
       </item>
@@ -27,8 +27,8 @@
 &lt;p&gt;Kevin Marks facilitated a good Indieweb discussion at the Internet Identity Workshop. See &lt;a href=&quot;http://iiw.idcommons.net/IndieWeb_Into_%E2%80%93_Own_Your_Web_Identity_/_Interoperate_with_other_people_%2B_Silos&quot;&gt;notes&lt;/a&gt;.  The next &lt;a href=&quot;http://2016.indieweb.org/&quot;&gt;Indieweb Summit&lt;/a&gt; is in Portland the weekend of June 4 &amp;amp; 5.&lt;/p&gt;
 </description>
         <pubDate>Mon, 09 May 2016 14:24:00 -0500</pubDate>
-        <link>https://herestomwiththeweather.com/2016/05/09/indieweb-at-iiw-22.html</link>
-        <guid isPermaLink="true">https://herestomwiththeweather.com/2016/05/09/indieweb-at-iiw-22.html</guid>
+        <link>https://herestomwiththeweather.com/2016/05/09/indieweb-at-iiw-22/</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2016/05/09/indieweb-at-iiw-22/</guid>
         
         <category>identity</category>
         
@@ -70,8 +70,8 @@ function sendWithGas(address destination, uint256 value, uint256 extraGasAmt) in
 &lt;p&gt;Now, they just need to update their contract!&lt;/p&gt;
 </description>
         <pubDate>Sat, 27 Feb 2016 11:22:00 -0600</pubDate>
-        <link>https://herestomwiththeweather.com/2016/02/27/ethereum-contract-update.html</link>
-        <guid isPermaLink="true">https://herestomwiththeweather.com/2016/02/27/ethereum-contract-update.html</guid>
+        <link>https://herestomwiththeweather.com/2016/02/27/ethereum-contract-update/</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2016/02/27/ethereum-contract-update/</guid>
         
         <category>ethereum</category>
         
@@ -83,8 +83,8 @@ function sendWithGas(address destination, uint256 value, uint256 extraGasAmt) in
         <description>&lt;p&gt;The “Rebooting the Web of Trust” session by Christopher Allen at Internet Identity Workshop 21 was a nice summary of the submissions (the price of attendance) for an upcoming conference. Not only are the &lt;a href=&quot;https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust&quot;&gt;papers&lt;/a&gt; on Github but also &lt;a href=&quot;https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust/issues&quot;&gt;issues&lt;/a&gt; are discussed.&lt;/p&gt;
 </description>
         <pubDate>Wed, 28 Oct 2015 11:08:59 -0500</pubDate>
-        <link>https://herestomwiththeweather.com/2015/10/28/iiw21.html</link>
-        <guid isPermaLink="true">https://herestomwiththeweather.com/2015/10/28/iiw21.html</guid>
+        <link>https://herestomwiththeweather.com/2015/10/28/iiw21/</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2015/10/28/iiw21/</guid>
         
         <category>identity</category>
         
@@ -102,8 +102,8 @@ function sendWithGas(address destination, uint256 value, uint256 extraGasAmt) in
 &lt;p&gt;The remote participation tools for IETF are impressive and it was cool to see this in action. The media archives of past events is also a great resource. Here is the &lt;a href=&quot;http://www.ietf.org/proceedings/92/oauth.html&quot;&gt;media for the OAuth session&lt;/a&gt; I attended.&lt;/p&gt;
 </description>
         <pubDate>Wed, 08 Apr 2015 11:28:16 -0500</pubDate>
-        <link>https://herestomwiththeweather.com/2015/04/08/ietf92.html</link>
-        <guid isPermaLink="true">https://herestomwiththeweather.com/2015/04/08/ietf92.html</guid>
+        <link>https://herestomwiththeweather.com/2015/04/08/ietf92/</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2015/04/08/ietf92/</guid>
         
         <category>ietf</category>
         
@@ -123,8 +123,8 @@ function sendWithGas(address destination, uint256 value, uint256 extraGasAmt) in
 &lt;p&gt;The whole point is that these companies are not disclosing to the users what they are doing to them. And so it’s the users’ fault that they’re not bothered by the transgressions?&lt;/p&gt;
 </description>
         <pubDate>Sat, 14 Mar 2015 11:54:50 -0500</pubDate>
-        <link>https://herestomwiththeweather.com/2015/03/14/data-and-goliath.html</link>
-        <guid isPermaLink="true">https://herestomwiththeweather.com/2015/03/14/data-and-goliath.html</guid>
+        <link>https://herestomwiththeweather.com/2015/03/14/data-and-goliath/</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2015/03/14/data-and-goliath/</guid>
         
         <category>bruceschneier</category>
         
@@ -138,8 +138,8 @@ function sendWithGas(address destination, uint256 value, uint256 extraGasAmt) in
         <description>&lt;p&gt;I have been playing around with &lt;a href=&quot;https://support.mozilla.org/en-US/kb/where-firefox-hello-button&quot;&gt;Firefox Hello&lt;/a&gt; today. It requires at least version 34.0.5 of Firefox. I like having a contact list in my Firefox browser to initiate WebRTC video conferences. For instance, If I am signed in to Firefox Hello, you can easily call me after adding my email as a contact. If I am not signed in, it seems you have to send me an invitation url to call me which isn’t so bad.&lt;/p&gt;
 </description>
         <pubDate>Thu, 15 Jan 2015 16:58:21 -0600</pubDate>
-        <link>https://herestomwiththeweather.com/2015/01/15/firefox-hello.html</link>
-        <guid isPermaLink="true">https://herestomwiththeweather.com/2015/01/15/firefox-hello.html</guid>
+        <link>https://herestomwiththeweather.com/2015/01/15/firefox-hello/</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2015/01/15/firefox-hello/</guid>
         
         <category>firefox</category>
         
@@ -155,8 +155,8 @@ function sendWithGas(address destination, uint256 value, uint256 extraGasAmt) in
 &lt;p&gt;I’m in Longview for my brother David’s memorial service. On a visit with him here in August, he showed me an online community devoted to sharing information about cancer treatment. It was a real online community that made a difference and I was very glad to see the important contributions he made.&lt;/p&gt;
 </description>
         <pubDate>Wed, 03 Dec 2014 09:11:28 -0600</pubDate>
-        <link>https://herestomwiththeweather.com/2014/12/03/memorial-service.html</link>
-        <guid isPermaLink="true">https://herestomwiththeweather.com/2014/12/03/memorial-service.html</guid>
+        <link>https://herestomwiththeweather.com/2014/12/03/memorial-service/</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2014/12/03/memorial-service/</guid>
         
         <category>longview</category>
         
@@ -168,8 +168,8 @@ function sendWithGas(address destination, uint256 value, uint256 extraGasAmt) in
         <description>&lt;p&gt;Thanks to Stephen Torrence for &lt;a href=&quot;http://effaustin.org/2014/07/21st-century-virtual-identity-a-recording&quot;&gt;recording the EFF-Austin meeting&lt;/a&gt;. Some of the toughest questions raised after the presentation regarded digital death and Stephen &lt;a href=&quot;https://soundcloud.com/stephen-torrence/eff-austin-july-meetup-2014&quot;&gt;included some relevant links&lt;/a&gt; with the recording. Lots to think about!&lt;/p&gt;
 </description>
         <pubDate>Fri, 25 Jul 2014 14:24:06 -0500</pubDate>
-        <link>https://herestomwiththeweather.com/2014/07/25/eff-austin-meeting.html</link>
-        <guid isPermaLink="true">https://herestomwiththeweather.com/2014/07/25/eff-austin-meeting.html</guid>
+        <link>https://herestomwiththeweather.com/2014/07/25/eff-austin-meeting/</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2014/07/25/eff-austin-meeting/</guid>
         
         <category>effaustin</category>
         
@@ -182,8 +182,8 @@ function sendWithGas(address destination, uint256 value, uint256 extraGasAmt) in
 
 </description>
         <pubDate>Sun, 20 Jul 2014 02:31:41 -0500</pubDate>
-        <link>https://herestomwiththeweather.com/2014/07/20/hello-pants.html</link>
-        <guid isPermaLink="true">https://herestomwiththeweather.com/2014/07/20/hello-pants.html</guid>
+        <link>https://herestomwiththeweather.com/2014/07/20/hello-pants/</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2014/07/20/hello-pants/</guid>
         
         <category>pants</category>
         
