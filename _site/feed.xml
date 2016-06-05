@@ -5,9 +5,20 @@
     <description>mostly about Internet and ice hockey</description>
     <link>https://herestomwiththeweather.com/</link>
     <atom:link href="https://herestomwiththeweather.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 04 Jun 2016 11:20:00 -0500</pubDate>
-    <lastBuildDate>Sat, 04 Jun 2016 11:20:00 -0500</lastBuildDate>
+    <pubDate>Sun, 05 Jun 2016 15:51:25 -0500</pubDate>
+    <lastBuildDate>Sun, 05 Jun 2016 15:51:25 -0500</lastBuildDate>
     <generator>Jekyll v3.0.5</generator>
+    
+      <item>
+        <title>Testing webmention</title>
+        <description>&lt;p&gt;Testing webmention. &lt;a href=&quot;http://herestomwiththeweather.com/2016/02/27/ethereum-contract-update/&quot;&gt;This&lt;/a&gt; is an article about ethereum.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 05 Jun 2016 00:00:00 -0500</pubDate>
+        <link>https://herestomwiththeweather.com/2016/06/05/testing-webmention/</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2016/06/05/testing-webmention/</guid>
+        
+        
+      </item>
     
       <item>
         <title>At the Indieweb Summit!</title>
@@ -170,19 +181,6 @@ function sendWithGas(address destination, uint256 value, uint256 extraGasAmt) in
         <guid isPermaLink="true">https://herestomwiththeweather.com/2014/12/03/memorial-service/</guid>
         
         <category>longview</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>EFF Austin meeting</title>
-        <description>&lt;p&gt;Thanks to Stephen Torrence for &lt;a href=&quot;http://effaustin.org/2014/07/21st-century-virtual-identity-a-recording&quot;&gt;recording the EFF-Austin meeting&lt;/a&gt;. Some of the toughest questions raised after the presentation regarded digital death and Stephen &lt;a href=&quot;https://soundcloud.com/stephen-torrence/eff-austin-july-meetup-2014&quot;&gt;included some relevant links&lt;/a&gt; with the recording. Lots to think about!&lt;/p&gt;
-</description>
-        <pubDate>Fri, 25 Jul 2014 14:24:06 -0500</pubDate>
-        <link>https://herestomwiththeweather.com/2014/07/25/eff-austin-meeting/</link>
-        <guid isPermaLink="true">https://herestomwiththeweather.com/2014/07/25/eff-austin-meeting/</guid>
-        
-        <category>effaustin</category>
         
         
       </item>
