@@ -5,9 +5,20 @@
     <description>mostly about Internet and ice hockey</description>
     <link>https://herestomwiththeweather.com/</link>
     <atom:link href="https://herestomwiththeweather.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 05 Jun 2016 15:51:25 -0500</pubDate>
-    <lastBuildDate>Sun, 05 Jun 2016 15:51:25 -0500</lastBuildDate>
+    <pubDate>Sun, 05 Jun 2016 16:50:04 -0500</pubDate>
+    <lastBuildDate>Sun, 05 Jun 2016 16:50:04 -0500</lastBuildDate>
     <generator>Jekyll v3.0.5</generator>
+    
+      <item>
+        <title>Another webmention test</title>
+        <description>&lt;p&gt;Another webmention test. &lt;a href=&quot;http://herestomwiththeweather.com/2016/02/27/ethereum-contract-update/&quot;&gt;This&lt;/a&gt; again.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 05 Jun 2016 11:46:38 -0500</pubDate>
+        <link>https://herestomwiththeweather.com/2016/06/05/another-webmention-test/</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2016/06/05/another-webmention-test/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Testing webmention</title>
@@ -166,21 +177,6 @@ function sendWithGas(address destination, uint256 value, uint256 extraGasAmt) in
         <category>firefox</category>
         
         <category>webrtc</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>David&#39;s Memorial Service</title>
-        <description>&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/tbbrown/451117849&quot;&gt;&lt;img src=&quot;https://farm1.staticflickr.com/173/451117849_3471b8e3d7.jpg&quot; alt=&quot;Easter&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;I’m in Longview for my brother David’s memorial service. On a visit with him here in August, he showed me an online community devoted to sharing information about cancer treatment. It was a real online community that made a difference and I was very glad to see the important contributions he made.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 03 Dec 2014 09:11:28 -0600</pubDate>
-        <link>https://herestomwiththeweather.com/2014/12/03/memorial-service/</link>
-        <guid isPermaLink="true">https://herestomwiththeweather.com/2014/12/03/memorial-service/</guid>
-        
-        <category>longview</category>
         
         
       </item>
