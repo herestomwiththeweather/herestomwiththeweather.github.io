@@ -5,9 +5,20 @@
     <description>mostly about Internet and ice hockey</description>
     <link>https://herestomwiththeweather.com/</link>
     <atom:link href="https://herestomwiththeweather.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 05 Jun 2016 16:50:04 -0500</pubDate>
-    <lastBuildDate>Sun, 05 Jun 2016 16:50:04 -0500</lastBuildDate>
+    <pubDate>Tue, 07 Jun 2016 11:56:31 -0500</pubDate>
+    <lastBuildDate>Tue, 07 Jun 2016 11:56:31 -0500</lastBuildDate>
     <generator>Jekyll v3.0.5</generator>
+    
+      <item>
+        <title>Yet another webmention test</title>
+        <description>&lt;p&gt;Yet another webmention test. &lt;a href=&quot;http://herestomwiththeweather.com/2016/02/27/ethereum-contract-update/&quot;&gt;This&lt;/a&gt; one last time.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 07 Jun 2016 06:54:26 -0500</pubDate>
+        <link>https://herestomwiththeweather.com/2016/06/07/yet-another-webmention-test/</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2016/06/07/yet-another-webmention-test/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Another webmention test</title>
@@ -162,21 +173,6 @@ function sendWithGas(address destination, uint256 value, uint256 extraGasAmt) in
         <category>bruceschneier</category>
         
         <category>privacy</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Firefox Hello</title>
-        <description>&lt;p&gt;I have been playing around with &lt;a href=&quot;https://support.mozilla.org/en-US/kb/where-firefox-hello-button&quot;&gt;Firefox Hello&lt;/a&gt; today. It requires at least version 34.0.5 of Firefox. I like having a contact list in my Firefox browser to initiate WebRTC video conferences. For instance, If I am signed in to Firefox Hello, you can easily call me after adding my email as a contact. If I am not signed in, it seems you have to send me an invitation url to call me which isn’t so bad.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 15 Jan 2015 16:58:21 -0600</pubDate>
-        <link>https://herestomwiththeweather.com/2015/01/15/firefox-hello/</link>
-        <guid isPermaLink="true">https://herestomwiththeweather.com/2015/01/15/firefox-hello/</guid>
-        
-        <category>firefox</category>
-        
-        <category>webrtc</category>
         
         
       </item>
