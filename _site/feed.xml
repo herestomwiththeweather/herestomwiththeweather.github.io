@@ -5,9 +5,24 @@
     <description>mostly about Internet and ice hockey</description>
     <link>https://herestomwiththeweather.com/</link>
     <atom:link href="https://herestomwiththeweather.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 07 Jun 2016 12:52:11 -0500</pubDate>
-    <lastBuildDate>Tue, 07 Jun 2016 12:52:11 -0500</lastBuildDate>
+    <pubDate>Tue, 07 Jun 2016 13:49:47 -0500</pubDate>
+    <lastBuildDate>Tue, 07 Jun 2016 13:49:47 -0500</lastBuildDate>
     <generator>Jekyll v3.0.5</generator>
+    
+      <item>
+        <title>Indieweb Summit 2016 Demos</title>
+        <description>&lt;p&gt;Wow! I had a great time at the &lt;a href=&quot;http://2016.indieweb.org/&quot;&gt;Indieweb Summit&lt;/a&gt; and was very impressed with the current work.  The first day (Saturday) was barcamp-style sessions and the second day was project day with &lt;a href=&quot;http://indiewebcamp.com/2016/Demos&quot;&gt;demos&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/tollwerk/27185430720/in/album-72157669305156105/&quot;&gt;&lt;img src=&quot;https://c2.staticflickr.com/8/7671/27185430720_7cbabeb9ba_c.jpg&quot; alt=&quot;Indieweb&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I worked on a modest project of automating sending my webmentions with a post-receive hook to my git server. The code I wrote is available &lt;a href=&quot;https://gist.github.com/herestomwiththeweather/c1ec89cb22f6d97feed963b4b32309e3&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://gist.github.com/herestomwiththeweather/f73dec9fdaa2ed0821594192f4a93cfd&quot;&gt;here&lt;/a&gt;. I plan to write up some more detail later.  Thanks to &lt;a href=&quot;http://tantek.com/&quot;&gt;Tantek&lt;/a&gt;, &lt;a href=&quot;https://aaronparecki.com/&quot;&gt;Aaron&lt;/a&gt;, &lt;a href=&quot;https://aaronparecki.com/&quot;&gt;Shane&lt;/a&gt; and everyone for a great experience!&lt;/p&gt;
+</description>
+        <pubDate>Tue, 07 Jun 2016 08:00:15 -0500</pubDate>
+        <link>https://herestomwiththeweather.com/2016/06/07/indieweb-summit-2016-demos/</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2016/06/07/indieweb-summit-2016-demos/</guid>
+        
+        
+      </item>
     
       <item>
         <title>At the Indieweb Summit!</title>
@@ -170,19 +185,6 @@ function sendWithGas(address destination, uint256 value, uint256 extraGasAmt) in
         <guid isPermaLink="true">https://herestomwiththeweather.com/2014/12/03/memorial-service/</guid>
         
         <category>longview</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>EFF Austin meeting</title>
-        <description>&lt;p&gt;Thanks to Stephen Torrence for &lt;a href=&quot;http://effaustin.org/2014/07/21st-century-virtual-identity-a-recording&quot;&gt;recording the EFF-Austin meeting&lt;/a&gt;. Some of the toughest questions raised after the presentation regarded digital death and Stephen &lt;a href=&quot;https://soundcloud.com/stephen-torrence/eff-austin-july-meetup-2014&quot;&gt;included some relevant links&lt;/a&gt; with the recording. Lots to think about!&lt;/p&gt;
-</description>
-        <pubDate>Fri, 25 Jul 2014 14:24:06 -0500</pubDate>
-        <link>https://herestomwiththeweather.com/2014/07/25/eff-austin-meeting/</link>
-        <guid isPermaLink="true">https://herestomwiththeweather.com/2014/07/25/eff-austin-meeting/</guid>
-        
-        <category>effaustin</category>
         
         
       </item>
