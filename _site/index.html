@@ -122,6 +122,27 @@
     <article role="article" class="post h-entry">
 		<header class="entry-header">
 			<h1 class="post-title p-name">
+	      		<a class="u-url" href="/2016/06/10/mr.-hockey-1928-2016/">
+	        		Mr. Hockey 1928-2016
+	      		</a>
+	  		</h1>
+			<time class="dt-time post-date" datetime="2016-06-10T16:31:43-05:00">10 Jun 2016</time>
+		</header>
+		<div class="e-content">
+		<p><a href="http://www.cbc.ca/news/canada/edmonton/wayne-gretzky-recalls-his-friendship-with-gordie-howe-the-greatest-to-ever-play-the-game-1.3629087"><img src="http://i.cbc.ca/1.3629700.1465597416!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_620/howe-and-gretzky.jpg" alt="Gordie Howe" /></a></p>
+
+<p>I narrowly missed watching Howe play and win championships for the Houston Aeros as my family moved back to Houston just after he left for the Hartford Whalers. It was truly amazing that a 50 year old man could still competitively play professional hockey. Jaromír Jágr is the closest but he’s only 44.</p>
+
+<p>I was fortunate to see several Aeros games after Howe’s departure and I especially liked tweets from former Houston Aero Cam Connor today reminiscing about Gordie’s <a href="https://twitter.com/CamConnorNHL/status/741291384162811904">toughness on the ice</a> but also <a href="https://twitter.com/CamConnorNHL/status/741318013463363584">kindness</a>. Gretzky is right that Howe was <a href="http://www.cbc.ca/news/canada/edmonton/wayne-gretzky-recalls-his-friendship-with-gordie-howe-the-greatest-to-ever-play-the-game-1.3629087">the greatest</a>.</p>
+
+<p>Rest in Peace, Mr. Hockey.</p>
+
+		</div>
+	</article>
+    
+    <article role="article" class="post h-entry">
+		<header class="entry-header">
+			<h1 class="post-title p-name">
 	      		<a class="u-url" href="/2016/06/07/indieweb-summit-2016-demos/">
 	        		Indieweb Summit 2016 Demos
 	      		</a>
@@ -181,47 +202,6 @@
 		<p><a href="https://www.flickr.com/photos/tbbrown/26808132771"><img src="https://c4.staticflickr.com/8/7374/26808132771_531e2001d6_n.jpg" alt="Indieweb" /></a></p>
 
 <p>Kevin Marks facilitated a good Indieweb discussion at the Internet Identity Workshop. See <a href="http://iiw.idcommons.net/IndieWeb_Into_%E2%80%93_Own_Your_Web_Identity_/_Interoperate_with_other_people_%2B_Silos">notes</a>.  The next <a href="http://2016.indieweb.org/">Indieweb Summit</a> is in Portland the weekend of June 4 &amp; 5.</p>
-
-		</div>
-	</article>
-    
-    <article role="article" class="post h-entry">
-		<header class="entry-header">
-			<h1 class="post-title p-name">
-	      		<a class="u-url" href="/2016/02/27/ethereum-contract-update/">
-	        		Ethereum Contract Update
-	      		</a>
-	  		</h1>
-			<time class="dt-time post-date" datetime="2016-02-27T11:22:00-06:00">27 Feb 2016</time>
-		</header>
-		<div class="e-content">
-		<p>Getting up and running with <a href="https://www.ethereum.org">Ethereum</a> on Ubuntu Trusty has been fairly painless thanks to the <a href="https://github.com/ConsenSys/truffle">truffle</a> development environment. The <a href="https://www.youtube.com/watch?v=GPP6uAq15d8">HOWTO: Building Ethereum Apps With Truffle</a> is a good introduction but a few details, like directory layout, have changed since then.</p>
-
-<p>At <a href="http://www.meetup.com/Austin-Ethereum-Meetup/events/228452105">the most recent Austin Ethereum meetup</a> we had a conversation about how to handle the contingency of when you need to update your “<a href="https://medium.com/@ConsenSys/unpacking-the-term-smart-contract-e63238f7db65#.q6szg6xr5">contract</a>” which has already been deployed to the blockchain. Using “contract” as the term for the main class makes the discussion of updating such code more difficult than it should be. Code often needs to be updated for new features or fixing bugs.</p>
-
-<p>For instance, it is important to check (as mentioned in <a href="https://chriseth.github.io/notes/talks/safe_solidity/#/7">How to Write Safe Smart Contracts</a> and <a href="http://solidity.readthedocs.org/en/latest/types.html#address">Address types</a>) the return value of send().</p>
-
-<p>The “King of the Ether Throne” <a href="http://www.kingoftheether.com/postmortem.html">post-mortem</a> shares the unenviable experience of not doing this check. The offending solidity code was</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>currentMonarch.etherAddress.send(compensation);
-</code></pre>
-</div>
-
-<p>In this particular case, send() was failing because the destination address was a contract address (an Ethereum Mist “contract-based wallet”) and the default 2300 gas supplied by send() was insufficient for the destination contract to run. So, their <a href="https://github.com/kieranelby/KingOfTheEtherThrone/commit/120f5a20b17600154ecb11ca120ec0dc296f66d5#diff-05a7e7e015bed68b1fcc05cd0b5c680dR209">fix</a> was to define a new sendWithGas() function which allows extra gas to be sent and returns a boolean like send():</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>//Unfortunately destination.send() only includes a stipend of 2300 gas, which
-//isn't enough to send ether to some wallet contracts - use this to add more.
-
-function sendWithGas(address destination, uint256 value, uint256 extraGasAmt) internal returns (bool)
-{
-  return destination.call.value(value).gas(extraGasAmt)();
-}
-</code></pre>
-</div>
-
-<p>Now, the sendWithGas() return value is stored in a payment status and if that status is failure, the operation is cancelled with prior state restored.</p>
-
-<p>Now, they just need to update their contract!</p>
 
 		</div>
 	</article>

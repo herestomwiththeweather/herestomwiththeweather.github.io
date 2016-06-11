@@ -70,6 +70,47 @@
     <article role="article" class="post h-entry">
 		<header class="entry-header">
 			<h1 class="post-title p-name">
+	      		<a class="u-url" href="/2016/02/27/ethereum-contract-update/">
+	        		Ethereum Contract Update
+	      		</a>
+	  		</h1>
+			<time class="dt-time post-date" datetime="2016-02-27T11:22:00-06:00">27 Feb 2016</time>
+		</header>
+		<div class="e-content">
+		<p>Getting up and running with <a href="https://www.ethereum.org">Ethereum</a> on Ubuntu Trusty has been fairly painless thanks to the <a href="https://github.com/ConsenSys/truffle">truffle</a> development environment. The <a href="https://www.youtube.com/watch?v=GPP6uAq15d8">HOWTO: Building Ethereum Apps With Truffle</a> is a good introduction but a few details, like directory layout, have changed since then.</p>
+
+<p>At <a href="http://www.meetup.com/Austin-Ethereum-Meetup/events/228452105">the most recent Austin Ethereum meetup</a> we had a conversation about how to handle the contingency of when you need to update your “<a href="https://medium.com/@ConsenSys/unpacking-the-term-smart-contract-e63238f7db65#.q6szg6xr5">contract</a>” which has already been deployed to the blockchain. Using “contract” as the term for the main class makes the discussion of updating such code more difficult than it should be. Code often needs to be updated for new features or fixing bugs.</p>
+
+<p>For instance, it is important to check (as mentioned in <a href="https://chriseth.github.io/notes/talks/safe_solidity/#/7">How to Write Safe Smart Contracts</a> and <a href="http://solidity.readthedocs.org/en/latest/types.html#address">Address types</a>) the return value of send().</p>
+
+<p>The “King of the Ether Throne” <a href="http://www.kingoftheether.com/postmortem.html">post-mortem</a> shares the unenviable experience of not doing this check. The offending solidity code was</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>currentMonarch.etherAddress.send(compensation);
+</code></pre>
+</div>
+
+<p>In this particular case, send() was failing because the destination address was a contract address (an Ethereum Mist “contract-based wallet”) and the default 2300 gas supplied by send() was insufficient for the destination contract to run. So, their <a href="https://github.com/kieranelby/KingOfTheEtherThrone/commit/120f5a20b17600154ecb11ca120ec0dc296f66d5#diff-05a7e7e015bed68b1fcc05cd0b5c680dR209">fix</a> was to define a new sendWithGas() function which allows extra gas to be sent and returns a boolean like send():</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>//Unfortunately destination.send() only includes a stipend of 2300 gas, which
+//isn't enough to send ether to some wallet contracts - use this to add more.
+
+function sendWithGas(address destination, uint256 value, uint256 extraGasAmt) internal returns (bool)
+{
+  return destination.call.value(value).gas(extraGasAmt)();
+}
+</code></pre>
+</div>
+
+<p>Now, the sendWithGas() return value is stored in a payment status and if that status is failure, the operation is cancelled with prior state restored.</p>
+
+<p>Now, they just need to update their contract!</p>
+
+		</div>
+	</article>
+    
+    <article role="article" class="post h-entry">
+		<header class="entry-header">
+			<h1 class="post-title p-name">
 	      		<a class="u-url" href="/2015/10/28/iiw21/">
 	        		IIW21
 	      		</a>
@@ -135,23 +176,6 @@
 		</header>
 		<div class="e-content">
 		<p>I have been playing around with <a href="https://support.mozilla.org/en-US/kb/where-firefox-hello-button">Firefox Hello</a> today. It requires at least version 34.0.5 of Firefox. I like having a contact list in my Firefox browser to initiate WebRTC video conferences. For instance, If I am signed in to Firefox Hello, you can easily call me after adding my email as a contact. If I am not signed in, it seems you have to send me an invitation url to call me which isn’t so bad.</p>
-
-		</div>
-	</article>
-    
-    <article role="article" class="post h-entry">
-		<header class="entry-header">
-			<h1 class="post-title p-name">
-	      		<a class="u-url" href="/2014/12/03/memorial-service/">
-	        		David's Memorial Service
-	      		</a>
-	  		</h1>
-			<time class="dt-time post-date" datetime="2014-12-03T09:11:28-06:00">03 Dec 2014</time>
-		</header>
-		<div class="e-content">
-		<p><a href="https://www.flickr.com/photos/tbbrown/451117849"><img src="https://farm1.staticflickr.com/173/451117849_3471b8e3d7.jpg" alt="Easter" /></a></p>
-
-<p>I’m in Longview for my brother David’s memorial service. On a visit with him here in August, he showed me an online community devoted to sharing information about cancer treatment. It was a real online community that made a difference and I was very glad to see the important contributions he made.</p>
 
 		</div>
 	</article>
