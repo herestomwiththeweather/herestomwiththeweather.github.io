@@ -5,9 +5,26 @@
     <description>mostly about Internet and ice hockey</description>
     <link>https://herestomwiththeweather.com/</link>
     <atom:link href="https://herestomwiththeweather.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 10 Jun 2016 21:59:38 -0500</pubDate>
-    <lastBuildDate>Fri, 10 Jun 2016 21:59:38 -0500</lastBuildDate>
+    <pubDate>Mon, 27 Jun 2016 23:58:54 -0500</pubDate>
+    <lastBuildDate>Mon, 27 Jun 2016 23:58:54 -0500</lastBuildDate>
     <generator>Jekyll v3.0.5</generator>
+    
+      <item>
+        <title>When a Norris Trophy finalist shows up at Drop-In Hockey</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://www.flickr.com/photos/tbbrown/27334159503/&quot;&gt;&lt;img src=&quot;https://c8.staticflickr.com/8/7369/27334159503_74af714a9b_z.jpg&quot; alt=&quot;Brent Burns&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Drop-in hockey is always a lot of fun but today it was crazy because seemingly out of nowhere, this player who looks like &lt;a href=&quot;https://en.wikipedia.org/wiki/Brent_Burns&quot;&gt;Brent Burns&lt;/a&gt; shows up at the last minute.  After watching him skate for a few seconds, it was clear that this was the real deal.&lt;/p&gt;
+
+&lt;p&gt;Shortly into my first shift, someone on the other team hit the puck into center ice and I had the opportunity to retrieve it.  I saw Burns was the closest opposing player to the puck and yet somehow the thought “I got this” actually went through my head.  Since I had my back to the puck, I circled around but by the time I made eye-contact with the puck, Burns was already on his way to an easy score.&lt;/p&gt;
+
+&lt;p&gt;He was genuinely friendly afterwards and even said thanks for having him there (any time!) and several of us took a picture with him.  He &lt;a href=&quot;https://twitter.com/Burnzie88/status/747572135267184640&quot;&gt;tweeted&lt;/a&gt; about the visit.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 27 Jun 2016 18:21:33 -0500</pubDate>
+        <link>https://herestomwiththeweather.com/2016/06/27/when-a-norris-trophy-finalist-shows-up-at-drop-in-hockey/</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2016/06/27/when-a-norris-trophy-finalist-shows-up-at-drop-in-hockey/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Mr. Hockey 1928-2016</title>
@@ -172,21 +189,6 @@ function sendWithGas(address destination, uint256 value, uint256 extraGasAmt) in
         <category>bruceschneier</category>
         
         <category>privacy</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Firefox Hello</title>
-        <description>&lt;p&gt;I have been playing around with &lt;a href=&quot;https://support.mozilla.org/en-US/kb/where-firefox-hello-button&quot;&gt;Firefox Hello&lt;/a&gt; today. It requires at least version 34.0.5 of Firefox. I like having a contact list in my Firefox browser to initiate WebRTC video conferences. For instance, If I am signed in to Firefox Hello, you can easily call me after adding my email as a contact. If I am not signed in, it seems you have to send me an invitation url to call me which isn’t so bad.&lt;/p&gt;
-</description>
-        <pubDate>Thu, 15 Jan 2015 16:58:21 -0600</pubDate>
-        <link>https://herestomwiththeweather.com/2015/01/15/firefox-hello/</link>
-        <guid isPermaLink="true">https://herestomwiththeweather.com/2015/01/15/firefox-hello/</guid>
-        
-        <category>firefox</category>
-        
-        <category>webrtc</category>
         
         
       </item>
