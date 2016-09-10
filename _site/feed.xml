@@ -5,9 +5,22 @@
     <description>mostly about Internet and ice hockey</description>
     <link>https://herestomwiththeweather.com/</link>
     <atom:link href="https://herestomwiththeweather.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 27 Jun 2016 23:58:54 -0500</pubDate>
-    <lastBuildDate>Mon, 27 Jun 2016 23:58:54 -0500</lastBuildDate>
+    <pubDate>Sat, 10 Sep 2016 15:43:37 -0500</pubDate>
+    <lastBuildDate>Sat, 10 Sep 2016 15:43:37 -0500</lastBuildDate>
     <generator>Jekyll v3.0.5</generator>
+    
+      <item>
+        <title>Kentucky Trip</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Old_State_Capitol_%28Kentucky%29&quot;&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Goebel_fell_plaque.png/220px-Goebel_fell_plaque.png&quot; alt=&quot;Old State Capitol in Kentucky&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;I’m about to leave Kentucky after a pretty cool week here.  The highlight for me were three nights staying in a cabin made from a shipping container near Slade while visiting the Red River Gorge. It was really nice to be disconnected for a while and there was a Kroger in nearby Stanton to pick up all the ingredients for a good white chilli.  The Kentucky Historical Society library and the Old State Capitol tour in Frankfort were also good.  Besides my own cooking, the best food was the barbeque at Fred’s Smokehouse at the Jim Beam distillery and some derby pie and ice cream in Louisville.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 10 Sep 2016 10:00:42 -0500</pubDate>
+        <link>https://herestomwiththeweather.com/2016/09/10/kentucky-trip/</link>
+        <guid isPermaLink="true">https://herestomwiththeweather.com/2016/09/10/kentucky-trip/</guid>
+        
+        
+      </item>
     
       <item>
         <title>When a Norris Trophy finalist shows up at Drop-In Hockey</title>
@@ -166,29 +179,6 @@ function sendWithGas(address destination, uint256 value, uint256 extraGasAmt) in
         <guid isPermaLink="true">https://herestomwiththeweather.com/2015/04/08/ietf92/</guid>
         
         <category>ietf</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Data and Goliath</title>
-        <description>&lt;p&gt;Yesterday, Democracy Now! &lt;a href=&quot;http://www.democracynow.org/2015/3/13/data_and_goliath_bruce_schneier_on&quot;&gt;interviewed Bruce Schneier&lt;/a&gt; for his book &lt;a href=&quot;https://www.schneier.com/book-dg.html&quot;&gt;Data and Goliath&lt;/a&gt;. The book includes a footnote to the informative &lt;a href=&quot;http://confabulator.blogspot.com/2012/11/analysis-of-brightest-flashlight-free.html&quot;&gt;Analysis of Brightest Flashlight Free for Android&lt;/a&gt; in his “Business of Surveillance” chapter. Schneier notes that “the app started collecting and sending location information even before people clicked” accept on the license agreement. The FTC “didn’t fine the company, though, because the app was free.” More than 50 million users have downloaded the malware on the various app stores.&lt;/p&gt;
-
-&lt;p&gt;What is appalling is how often media coverage completely misunderstands the concept of consent with cases like this, Superfish and the Facebook Experiment. A typical example is &lt;a href=&quot;http://www.theguardian.com/technology/2014/oct/03/android-flashlight-apps-permissions-privacy&quot;&gt;this Guardian article&lt;/a&gt;:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Are users bothered by the privacy implications of these kinds of apps? Seemingly not, judging by their popularity. Brightest Flashlight has been installed more than 50m times according to the Google Play store’s stats.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;The whole point is that these companies are not disclosing to the users what they are doing to them. And so it’s the users’ fault that they’re not bothered by the transgressions?&lt;/p&gt;
-</description>
-        <pubDate>Sat, 14 Mar 2015 11:54:50 -0500</pubDate>
-        <link>https://herestomwiththeweather.com/2015/03/14/data-and-goliath/</link>
-        <guid isPermaLink="true">https://herestomwiththeweather.com/2015/03/14/data-and-goliath/</guid>
-        
-        <category>bruceschneier</category>
-        
-        <category>privacy</category>
         
         
       </item>
