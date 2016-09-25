@@ -1,0 +1,5 @@
+---
+title: "IndieWeb 2016"
+layout: post
+---
+RSVP <span class="p-rsvp">yes</span> to <a href="http://2016.indieweb.org/" rel="in-reply-to" class="u-in-reply-to">IndieWeb Summit</a>

@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "IIW21"
+date:   2015-10-28 11:08:59 -0500
+tags: identity iiw
+---
+The “Rebooting the Web of Trust” session by Christopher Allen at Internet Identity Workshop 21 was a nice summary of the submissions (the price of attendance) for an upcoming conference. Not only are the [papers](https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust) on Github but also [issues](https://github.com/WebOfTrustInfo/rebooting-the-web-of-trust/issues) are discussed.
