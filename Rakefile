@@ -4,6 +4,9 @@ require 'rake'
 require 'yaml'
 require 'fileutils'
 require 'rbconfig'
+require 'rss'
+require 'webmention'
+require 'time'
 
 # == Configuration =============================================================
 
@@ -223,5 +226,36 @@ task :transfer do
     puts "Your site was transfered."
   else
     raise "#{command} isn't a valid file transfer command."
+  end
+end
+
+desc "Send webmentions"
+task :webmention do
+  if File.exists?('latest_time.txt')
+    string = File.open('latest_time.txt', 'r') { |f| f.read }
+    latest = string.strip # RSS timestamp of most recent blog post for which webmentions have been sent
+  else
+    latest = 'Fri, 15 Jan 2016 23:59:59 +0000'
+  end
+
+  puts "latest webmention time: #{latest}"
+
+  latest_found = latest # RSS timestamp of most recent blog post including new ones found
+
+  last_time = Time.parse(latest)
+  rss = RSS::Parser.parse('http://herestomwiththeweather.com/feed.xml', false)
+  rss.items.each do |item|
+    t = Time.parse(item.pubDate.to_s)
+    if t > last_time
+      client = Webmention::Client.new item.link
+      sent = client.send_mentions
+      if t > Time.parse(latest_found)
+	latest_found = item.pubDate.to_s
+      end
+    end
+  end
+
+  if Time.parse(latest_found) > last_time
+    File.open('latest_time.txt', 'w') {|f| f.write(latest_found) }
   end
 end
