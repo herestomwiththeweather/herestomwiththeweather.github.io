@@ -11,7 +11,7 @@
 		{% elsif post.mf-repost-of %}
 			<a class="u-repost-of" href="{{post.mf-repost-of | first}}">{{post.title}}</a>
 		{% else %}
-		<a class="u-url" href="{{ site.baseurl }}{{ post.url }}">
+		<a class="u-url" href="{{ site.baseurl }}{{ post.url }}" data-proofer-ignore>
 			{{ post.title }}
 		</a>
 		{% endif %}

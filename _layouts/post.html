@@ -12,7 +12,7 @@ layout: default
   		{% elsif post.mf-repost-of %}
   			<a class="u-repost-of" href="{{page.mf-repost-of | first}}">{{post.title}}</a>
   		{% else %}
-  		<a class="u-url" href="{{ site.github.url }}{{ page.url }}">
+  		<a class="u-url" href="{{ site.github.url }}{{ page.url }}" data-proofer-ignore>
   			{{ page.title }}
   		</a>
   		{% endif %}
@@ -37,7 +37,7 @@ layout: default
             </a>
       </div>
       <div class="meta-wrap">
-        <p><a href="{{ post.url | prepend: site.github.url }}">{{ page.title }} </a> posted on <time datetime="{{ page.date | date_to_xmlschema }}" class="dt-time post-date">{{ page.date | date_to_string }}</time>.</p>
+        <p><a data-proofer-ignore href="{{ post.url | prepend: site.github.url }}">{{ page.title }} </a> posted on <time datetime="{{ page.date | date_to_xmlschema }}" class="dt-time post-date">{{ page.date | date_to_string }}</time>.</p>
         <p>This entry has been tagged with the keywords: {% for tags in page.tags %}<span class="tag">{{ tags }} </span>{% endfor %}</p>
     </div>
 
