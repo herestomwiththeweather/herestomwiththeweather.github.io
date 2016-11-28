@@ -41,7 +41,6 @@ author_img: https://avatars2.githubusercontent.com/u/16299?v=3&s=460
 # Build settings
 markdown: kramdown
 gems:
-  - github-pages
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-gist
