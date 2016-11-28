@@ -89,8 +89,6 @@ def last_passing_timestamp(travis_url)
   rss = RSS::Parser.parse(travis_url, false)
   rss.items.each do |item|
     if item.summary.to_s =~ /State: passed/
-      #t = Time.parse(item.updated.content.to_s)
-      #puts "processing #{t.strftime('%m-%d-%Y %H:%M')}"
       ts = item.updated.content.to_s
       break
     end
@@ -256,6 +254,7 @@ task :webmention do
     t = Time.parse(item.pubDate.to_s)
     # XXX assumes new blog post was not created prior to last passing travis build
     if t > last_time
+      puts "sending webmentions for #{item.link}"
       client = Webmention::Client.new item.link
       sent = client.send_mentions
     end
