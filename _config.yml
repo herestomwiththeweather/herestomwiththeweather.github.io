@@ -18,7 +18,7 @@ exclude:
   - vendor
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: # the base hostname & protocol for your site
+url: "https://herestomwiththeweather.com" # the base hostname & protocol for your site
 twitter_username: tomwiththeweath
 github_username: herestomwiththeweather
 #instagram_username: jekyll
