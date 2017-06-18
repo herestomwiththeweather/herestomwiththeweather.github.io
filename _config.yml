@@ -9,7 +9,7 @@
 lang: en
 title: HeresTomWithTheWeather
 email: herestomwiththeweather@gmail.com
-description: mostly about Internet and ice hockey
+description: Mostly about Internet and ice hockey
 permalink: pretty
 # Webmentions - leave blank (remove "yes") if you would not like to receive & display webmentions from other sites
 webmentions: yes
@@ -18,7 +18,7 @@ exclude:
   - vendor
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://herestomwiththeweather.com" # the base hostname & protocol for your site
+url: <%= ENV['URL'] %> # the base hostname & protocol for your site
 twitter_username: tomwiththeweath
 github_username: herestomwiththeweather
 #instagram_username: jekyll
