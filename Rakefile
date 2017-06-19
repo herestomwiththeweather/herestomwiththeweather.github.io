@@ -248,8 +248,11 @@ task :webmention do
 
   puts "latest webmention time: #{latest}"
 
+  rss_url = ENV['RSS_URL']
+  puts "rss url: #{rss_url}"
+
   last_time = Time.parse(latest)
-  rss = RSS::Parser.parse('http://herestomwiththeweather.com/feed.xml', false)
+  rss = RSS::Parser.parse(rss_url, false)
   rss.items.each do |item|
     t = Time.parse(item.pubDate.to_s)
     # XXX assumes new blog post was not created prior to last passing travis build
