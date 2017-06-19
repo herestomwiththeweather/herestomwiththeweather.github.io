@@ -247,6 +247,7 @@ task :webmention do
   latest = last_passing_timestamp(url) || 'Fri, 15 Jan 2016 23:59:59 +0000'
 
   puts "latest webmention time: #{latest}"
+  puts "url env var: #{ENV['URL']}"
 
   last_time = Time.parse(latest)
   rss = RSS::Parser.parse('http://herestomwiththeweather.com/feed.xml', false)
