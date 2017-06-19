@@ -243,13 +243,18 @@ end
 
 desc "Send webmentions"
 task :webmention do
-  url = 'https://api.travis-ci.org/repos/herestomwiththeweather/herestomwiththeweather.github.io/builds.atom'
+  project_owner = ENV['PROJECT_OWNER']
+  project_name = ENV['PROJECT_NAME']
+  rss_url = ENV['RSS_URL']
+
+  puts "project owner: #{project_owner}"
+  puts "project name: #{project_name}"
+  puts "rss url: #{rss_url}"
+
+  url = "https://api.travis-ci.org/repos/#{project_owner}/#{project_name}/builds.atom"
   latest = last_passing_timestamp(url) || 'Fri, 15 Jan 2016 23:59:59 +0000'
 
   puts "latest webmention time: #{latest}"
-
-  rss_url = ENV['RSS_URL']
-  puts "rss url: #{rss_url}"
 
   last_time = Time.parse(latest)
   rss = RSS::Parser.parse(rss_url, false)
