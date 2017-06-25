@@ -41,7 +41,7 @@ layout: default
         <p>
 	{% if post.mf-location != null %}
 	{% for loc in post.mf-location %}
-	  <img src="https://maps.googleapis.com/maps/api/staticmap?center={{loc.geo}}&zoom=17&size=500x400&key=AIzaSyDTToP0YOQxuTkWiF1W0vFxf3RXfoHEgJU">
+	  <img src="https://maps.googleapis.com/maps/api/staticmap?center={{loc.geo}}&zoom=17&size=500x400&key=AIzaSyDTToP0YOQxuTkWiF1W0vFxf3RXfoHEgJU" alt="google location map">
 	{% endfor %}
 	{% endif %}
         </p>
