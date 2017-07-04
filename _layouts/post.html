@@ -41,7 +41,13 @@ layout: default
         <p>
 	{% if post.mf-location != null %}
 	{% for loc in post.mf-location %}
-	  <img src="https://maps.googleapis.com/maps/api/staticmap?center={{loc.geo}}&zoom=17&size=500x400&key=AIzaSyDTToP0YOQxuTkWiF1W0vFxf3RXfoHEgJU" alt="google location map">
+	  {% assign loc_props = loc | split: ";" %}
+	  {% for loc_prop in loc_props %}
+	    {% if loc_prop contains 'geo' %}
+	      {% assign geo = loc_prop | split: ":" %}
+	      <img src="https://maps.googleapis.com/maps/api/staticmap?center={{geo.last}}&zoom=17&size=500x400&key=AIzaSyDTToP0YOQxuTkWiF1W0vFxf3RXfoHEgJU" alt="google location map">
+	    {% endif %}
+	  {% endfor %}
 	{% endfor %}
 	{% endif %}
         </p>
