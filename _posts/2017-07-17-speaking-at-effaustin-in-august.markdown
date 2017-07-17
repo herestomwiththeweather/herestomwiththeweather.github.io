@@ -1,5 +1,5 @@
 ---
-title: "Speaking at EFFAustin in August"
+title: "Speaking about Indieweb at EFFAustin in August"
 layout: post
 date: 2017-07-17 14:15:32
 ---
