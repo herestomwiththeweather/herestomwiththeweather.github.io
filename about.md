@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-Edit this page with your own information.
+Tom Brown is a software developer and beer league hockey player.
