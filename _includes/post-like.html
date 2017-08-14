@@ -1,6 +1,6 @@
 {% assign post = include.post %}
-<article class="h-entry">
-  <p class="p-name">
+<article>
+  <p class="p-name h-entry">
     Liked
     {% for like in post.mf-like-of %}
       <a class="u-like-of" href="{{like}}">{{like}}</a>{% if forloop.rindex == 2 %} and {% elsif forloop.last != true %}, {% endif %}
