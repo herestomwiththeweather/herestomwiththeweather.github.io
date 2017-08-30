@@ -1,8 +1,12 @@
 ---
 layout: default
 ---
+{% if page.mf-like-of != null %}
+  {% include post-like.html post=page %}
+{% else %}
+<article class="post h-entry">
   <header class="entry-header">
-	  {% if post.title != '' %}
+  {% if post.title != '' %}
   	<h1 class="post-title p-name">
   		{% if post.mf-bookmark %}
   			<a class="u-bookmark-of" href="{{page.mf-bookmark | first}}">{{post.title}}</a>
@@ -18,11 +22,7 @@ layout: default
   	</h1>
   {% endif %}
   </header>
-  {% if page.mf-like-of != null %}
-  {% include post-like.html post=page %}
-{% else %}
   {% include post-content.html post=page %}
-  {% endif %}
   <footer class="entry-footer">
 
       <div class="h-card p-author">
@@ -54,7 +54,9 @@ layout: default
     </div>
 
 </footer>
+</article>
 
-{% if site.webmentions %}
-{% include webmentions.html %}
+  {% if site.webmentions %}
+    {% include webmentions.html %}
+  {% endif %}
 {% endif %}
