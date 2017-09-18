@@ -2,7 +2,29 @@
 layout: default
 ---
 {% if page.mf-like-of != null %}
-  {% include post-like.html post=page %}
+<article>
+  <p class="p-name h-entry">
+    Liked
+    {% for like in post.mf-like-of %}
+      <a class="u-like-of" href="{{like}}">{{like}}</a>{% if forloop.rindex == 2 %} and {% elsif forloop.last != true %}, {% endif %}
+    {% endfor %}
+  </p>
+  <footer class="entry-footer">
+
+      <div class="h-card p-author">
+		        <a href="{{ site.github.url }}" class="entry-author-link" rel="author">
+                  {% if site.author_img %}
+                  <div class="auth-img">
+                    <img src="{{ site.author_img }}" alt="{{ site.author }}" class="u-photo">
+                  </div>
+                  {% endif %}
+                  {% include author.html %}
+            </a>
+      </div>
+
+</footer>
+
+</article>
 {% else %}
 <article class="post h-entry">
   <header class="entry-header">
