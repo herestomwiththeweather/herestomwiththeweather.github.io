@@ -45,7 +45,7 @@ Let's use strong authentication with a yubikey so click on the green button that
 
 ![pic](https://s3.amazonaws.com/coffeebucks/yubikey8.png)
 
-For this example, the browser is not logged into github yet, so both a password and yubikey are required to log into github.  After providing a password, github redirects us to a page that requires pressing the usb attached yubikey.
+For this example, the browser is not logged into github yet, so both a password and yubikey are required to log into github.  After providing a password, github redirects us to a page that prompts for pressing the usb attached yubikey.
 
 ![pic](https://s3.amazonaws.com/coffeebucks/yubikey9.png)
 
