@@ -21,16 +21,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://herestomwiththeweather.com" # the base hostname & protocol for your site
 twitter_username: tomwiththeweath
 github_username: herestomwiththeweather
-#instagram_username: jekyll
 flickr_username: tbbrown
-#foursquare_username:
-# Tumblr URL
-#tumblr_url: http://tumblr.com
-# Linkedin profile URL - Expecting a full url, not username
-#linkedin_url: http://linkedin.com
-# Facebook profile URL - Expecting a full url, not username
-#facebook_url: http://facebook.com
-
+goodreads_username: 656838-tom-brown
 
 # Can be over ridden with author: in Front Matter
 author: Tom
