@@ -4,17 +4,14 @@
 
 		<p>{{ site.description }}</p>
 		<ul class="soc">
+			{% if site.goodreads_username %}
+				{% include icon-goodreads.html %}
+			{% endif %}
 			{% if site.twitter_username %}
 		 		{% include icon-twitter.html %}
 		 	{% endif %}
 		 	{% if site.github_username %}
 				{% include icon-github.html %}
-			{% endif %}
-			{% if site.instagram_username %}
-				{% include icon-instagram.html %}
-			{% endif %}
-			{% if site.facebook_url %}
-				{% include icon-facebook.html %}
 			{% endif %}
 			{% if site.linkedin_url %}
 				{% include icon-linkedin.html %}
@@ -22,14 +19,11 @@
 			{% if site.tumblr_url %}
 				{% include icon-tumblr.html %}
 			{% endif %}
+			{% if site.keybase_username %}
+				{% include icon-keybase.html %}
+			{% endif %}
 			{% if site.flickr_username %}
 				{% include icon-flickr.html %}
-			{% endif %}
-			{% if site.foursquare_username %}
-				{% include icon-foursquare.html %}
-			{% endif %}
-			{% if site.goodreads_username %}
-				{% include icon-goodreads.html %}
 			{% endif %}
 			{% if site.email %}
 				{% include icon-email.html %}
