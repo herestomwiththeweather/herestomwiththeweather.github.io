@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/tbbrown
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://herestomwiththeweather.com
+  * I am tbbrown (https://keybase.io/tbbrown) on keybase.
+  * I have a public key ASBFNaAmVpeGqQcUFGlPUP9V2oyqKAj5xgLkNSTZoGNYBAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "01204535a026569786a9071414694f50ff55da8caa2808f9c602e43524d9a06358040a",
+      "host": "keybase.io",
+      "kid": "01204535a026569786a9071414694f50ff55da8caa2808f9c602e43524d9a06358040a",
+      "uid": "4c86c4777b3d5585b11f4537e8258319",
+      "username": "tbbrown"
+    },
+    "merkle_root": {
+      "ctime": 1528565260,
+      "hash": "e9d35d3d34a76e16e420e1984214ee687c6ccc5807b530d2321821413bb9aeb9f238eb4ece125576e6585a0af2441a923be69f02a511b3f721362d0880c4c818",
+      "hash_meta": "46fef525d38fb5e6006b126c57ff665e58d4177cf97c7f00edf467e6340fe0d4",
+      "seqno": 3051584
+    },
+    "service": {
+      "entropy": "MsamdkvdabbFhMDJiVaPyZB2",
+      "hostname": "herestomwiththeweather.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.1.0"
+  },
+  "ctime": 1528565295,
+  "expire_in": 504576000,
+  "prev": "7d60b4fc9f2f0e4e20eb8387b3669ec54a9f555fa3c0b8bc263ed9482f4afa36",
+  "seqno": 4,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgRTWgJlaXhqkHFBRpT1D/VdqMqigI+cYC5DUk2aBjWAQKp3BheWxvYWTESpcCBMQgfWC0/J8vDk4g64OHs2aexUqfVV+jwLi8Jj7ZSC9K+jbEIGMBd0JeqvD+7RSFVWcVt5nP3WD+SH9T+Ipg2zZ/3cdbAgHCo3NpZ8RAvhHtrUMaM9InCFokDFoa4BKMqHPDj458hMo4tDmigQzhtorESV89nklWQ9DoHp98pIuiB+QV37LSFAq4XuL1DahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIERcobT1okxgGLXu0/PJcKSr242RMuj78hLBRu8dSJJlo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/tbbrown
+
+==================================================================
