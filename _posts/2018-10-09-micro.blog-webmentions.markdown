@@ -1,0 +1,6 @@
+---
+title: "Micro.blog webmentions"
+layout: post
+date: 2018-10-09 11:30:20
+---
+This is great! [Webmention improvements on Micro.blog](https://www.manton.org/2018/10/09/webmention-improvements-on.html)
