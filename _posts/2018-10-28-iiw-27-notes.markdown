@@ -1,0 +1,35 @@
+---
+title: "IIW 27 Notes"
+layout: post
+date: 2018-10-28 16:00:41
+---
+Last week was a particularly good [Internet Identity Workshop](http://www.internetidentityworkshop.com/) and I'm looking forward to reading the [session notes](http://iiw.idcommons.net/IIW_27_Session_Notes) as they are published.
+
+Tuesday morning's icebreaker question was "what was your first a-ha! moment in identity?"  I can recall a few I had in early 2001 and one was reading Simson Garfinkel's [Database Nation](https://www.goodreads.com/book/show/846498.Database_Nation).  After the opening circle, I attended a [Sovrin Network](https://sovrin.org/) demo (see Johannes Ernst's [post](https://upon2020.com/blog/2018/10/pondrin-sovrin/)) and some 101 sessions.
+
+![FIDO 101](https://s3.amazonaws.com/stark-moon-46/images/fido_101.jpg)
+At the FIDO 101 session, Chris Streeks described the SMS 2-step verification phishing attack where a victim submits login creds to a fake web page and is redirected to another fake web page to enter the SMS code.  Meanwhile, the attacker passes the victim's login creds to the real site which triggers the SMS message so that the victim submits SMS code to the attacker's fake website.  FIDO 2 was also discussed which addresses fake keys and also supports origin bound keys.  [Yubikey 5](https://www.yubico.com/2018/09/introducing-the-yubikey-5-series-with-new-nfc-and-fido2-passwordless-features/) supports FIDO 2.  One feature that was new to me is "passwordless authentication." If your threat model includes the attacker having your key, it seems you do not want this.  However, I see that there is an option to add a PIN to unlock the key.  
+
+![Self-Sovereign Identity 101](https://s3.amazonaws.com/stark-moon-46/images/self_sovereign.jpg)
+At the Self-Sovereign Identity 101 session, Kaliya Hamlin and Heather Vescent answered questions like "How do I show up with my identity?" and "How do I control my identifier?" and explained that no one can take your DID (decentralized identifier) away from you.  I asked whether interoperability with the DID spec is a requirement to being a self-sovereign system.  There didn't seem to be consensus.
+
+The first session I attended was "Beyond OAuth: Transactional Authz" by Justin Richer.  This session was related to the article [Moving On from OAuth 2?](https://medium.com/@justinsecurity/moving-on-from-oauth-2-629a00133ade) and the Identiverse video [What's Wrong with Oauth 2?](https://www.youtube.com/watch?v=OLwz7pIXOWQ&t=6s).  The main idea was how, if we throw compatibility out, can we fix the problem of putting all those parameters in the front channel of OAuth 2.
+
+Then I attended Aaron Parecki's "OAuth for Single-Page Apps" and the idea was fixing OAuth in a compatible way so that single page apps don't have to return an access token in the front channel as that is susceptible to interception and replay attacks.  Torsten L. mentioned that the notion of a nonce was not defined in the OAuth 2 spec which is why there is the PKCE document.
+
+![UBOSBox](https://s3.amazonaws.com/stark-moon-46/images/ubosbox.jpg)
+Part of Wednesday is speed demo hour and it was nice to see the UBOSbox from [Indie Computing](https://indiecomputing.com/) in person.  If you have grown weary of the cloud, the UBOSbox is a nice alternative.  It runs in your home and the software is open source.
+
+![Yes-ID](https://s3.amazonaws.com/stark-moon-46/images/yes_id.jpg)
+Going back to IIW8, there was a session on [Financial Institutions as Identity Providers](http://iiw.idcommons.net/Financial_Institutions_as_Identity_Providers) but concern was expressed that banks might not want to deal with liability in case of mistakes.  That is why I found the [yes ID](https://www.yes.com) demo interesting.  It is German only but it [enables bank customers to use their online banking accounts for conducting various digital transactions, such as login, registration, identification, payment and signing.](http://iiw.idcommons.net/IIW_27_Demo_Hour)  
+
+
+
+![OAuth for the Open Web](https://s3.amazonaws.com/stark-moon-46/images/oauth_open_web.jpg)
+The last Wednesday session I attended was "Making OAuth Work on the Open Web" which is related to Aaron Parecki's article [OAuth for the Open Web](https://aaronparecki.com/2018/07/07/7/oauth-for-the-open-web).  Current identity standards on OAuth 2 are [administrative identity systems](http://www.windley.com/archives/2016/05/i_am_sybil.shtml) as they are built to administer identity in a specific domain.  [IndieAuth](https://indieauth.net/) is an extension of OAuth 2 with a shared global namespace.  Also, there was a particular focus on solving the problem of devs needing to preregister their client app on many instances of OAuth providers (for instance, Mastodon).  Aaron described using the client app's url as the client id which seems like a good solution.
+
+On Thursday, in the "OAuth Security 4 Dummies" session, redirect url matching attack was mentioned and how you can drastically reduce your attack surface if you require exact matching for redirect urls.  Otherwise, you better be extremely confident about the model for your entire domain.  There was excitement expressed about Justin's proposal mentioned earlier.  It was noted that scopes generally don't restrict by resource and it would be nice to have something in addition to scopes for this.  
+
+I also attended "Consent Management: Receipts, Practices, Standards" which is related to the [Kantara Initiative](https://kantarainitiative.org/).  There was a lot of good info but I'll just mention two good questions to consider: "Revocation of consent - where is your page where a user can revoke data herself?" and "How should the consent UX be different for connecting to wifi versus giving up my contacts?"
+
+Thanks to Kaliya Hamlin, Phil Windley, Doc Searls and Heidi Nobantu Saul for another great IIW!
