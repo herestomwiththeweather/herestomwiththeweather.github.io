@@ -1,0 +1,8 @@
+---
+title: "Plutopia.io podcast on the Indieweb"
+layout: post
+date: 2018-12-02 15:53:17
+---
+I had fun participating in the [Introduction to Indieweb](https://www.plutopia.io/2018/12/02/tom-brown-and-manton-reece-an-introduction-to-indieweb/) podcast with Manton, Jon and Scoop where we talk about some of the latest [Indieweb](https://indieweb.org/) progress.  
+
+Also mentioned is the upcoming [IndieWebCamp Austin](https://indieweb.org/2019/Austin) (February 23-24) as well as the monthly [Homebrew Website Club](https://indieweb.org/Homebrew_Website_Club) meetings (first Wednesday of the month) at [Mozart's Coffee](http://mozartscoffee.com/).  
