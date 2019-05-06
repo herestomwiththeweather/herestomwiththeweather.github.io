@@ -1,0 +1,14 @@
+---
+title: "IIW 28 Notes"
+layout: post
+date: 2019-05-06 00:22:48
+---
+
+[![SSI](https://pbs.twimg.com/media/D5kvu2qWAAAD1ok.jpg)](https://twitter.com/xmlgrrl/status/1123982069145788420)
+The "Your identity is not self-sovereign" session was a welcome discussion as the term self-sovereign identity (SSI) has become a thing.  
+
+The root problem with "self-sovereign" is that it is a misleading term because you cannot declare yourself sovereign.  That is outside of your control.  You are sovereign only to the extent that peers recognize your sovereignty.  What matters is the acceptance of your identity and you are not sovereign over that.
+
+There did not seem to be any disagreement about this problem although the proponents of SSI attending the session did not seem to be too bothered about it.  Rather, the term was meant to be intentionally provocative and our discussing it was evidence of its success.  However, it was noted that even within the small community that uses it, this jargon has not worked very well because there is no solid understanding of the use of the term.
+
+Also noted was that phrasing SSI in terms of technique rather than a specific technology or solution may allow us to have a better discussion. 
