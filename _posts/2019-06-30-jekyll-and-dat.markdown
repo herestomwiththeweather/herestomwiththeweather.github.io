@@ -13,7 +13,7 @@ which should mostly get me there.  I also want to add a [DNS txt record](https:/
 
 With this setup, even if my hosting provider goes down, [Beaker browser](https://beakerbrowser.com/) will be able to browse my site.
 
-Update 13:28 PST: DNS now serving DAT via TXT record:
+**Update 13:28 PST**: DNS now serving DAT via TXT record:
 
 	tbbrown@zero:~$ dig herestomwiththeweather.com TXT
 
