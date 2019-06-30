@@ -36,3 +36,4 @@ With this setup, even if my hosting provider goes down, [Beaker browser](https:/
 	;; WHEN: Sun Jun 30 15:23:23 CDT 2019
 	;; MSG SIZE  rcvd: 139
 
+**Update 15:50 PST**: [Dats on a Server](https://docs.datproject.org/docs/dat-server) documents how to keep a Dat resource available independent of your laptop. 
