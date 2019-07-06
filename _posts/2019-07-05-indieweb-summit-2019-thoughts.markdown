@@ -15,4 +15,4 @@ There were a lot of good day 2 [demos](https://indieweb.org/2019/Demos).  Displa
 $ dat store dat://b8ffbddeac2c7eec8b60f1d33774f515f47affe4bef0ad6fec15bc0c6cb1ad78
 ```
 
-Indieweb Summit was really well organized and I mentioned some of what I considered improvements to [Manton Reece](https://manton.org) at Austin Homebrew Website Club this week for consideration at the next IndiewebCamp Austin.
+Indieweb Summit seemed even better organized this year and I mentioned some of what I considered improvements to [Manton Reece](https://manton.org) at Austin Homebrew Website Club this week for consideration at the next IndiewebCamp Austin.
