@@ -3,12 +3,11 @@ layout: default
 ---
 {% if page.mf-like-of != null %}
 <article>
-  <p class="p-name h-entry">
+  <div class="p-name h-entry">
     Liked
     {% for like in page.mf-like-of %}
     <a class="u-like-of" href="{{like}}">{{like}}</a><a class="u-url" href="{{ page.url }}"></a>{% if forloop.rindex == 2 %} and {% elsif forloop.last != true %}, {% endif %}
     {% endfor %}
-  </p>
   <footer class="entry-footer">
 
       <div class="u-author h-card p-author">
@@ -23,6 +22,7 @@ layout: default
       </div>
 
 </footer>
+  </div>
 
 </article>
 {% else %}
