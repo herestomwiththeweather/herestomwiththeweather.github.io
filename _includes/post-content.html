@@ -29,13 +29,19 @@
       </h2>
     </header>
   {% endif %}
-{% if post.mf-in-reply-to != null %}
+  {% if post.mf-in-reply-to != null %}
       <h3>In reply to:</h3>
     <ul>
       {% for reply in post.mf-in-reply-to %}
         <li><a class="u-in-reply-to" rel="in-reply-to" href="{{reply}}">{{reply}}</a></li>
       {% endfor %}
     </ul>
+  {% elsif post.mf-read-of != null %}
+    {% for props in post.mf-read-of %}
+    <p>
+    {{post.mf-read-status.first | capitalize}} reading <a href="https://indiebookclub.biz/isbn/{{props.properties.uid.first | slice:-13,13}}">{{props.properties.name.first}}</a> by {{props.properties.author.first}}
+    </p>
+    {% endfor %}
   {% endif %}
 
   <div class="e-content">
