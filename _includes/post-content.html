@@ -39,7 +39,7 @@
   {% elsif post.mf-read-of != null %}
     {% for props in post.mf-read-of %}
     <p>
-    {{post.mf-read-status.first | capitalize}} <a href="https://indiebookclub.biz/isbn/{{props.properties.uid.first | slice:-13,13}}">{{props.properties.name.first}}</a> by {{props.properties.author.first}}
+    {{post.mf-read-status.first | capitalize}} <a href="https://openlibrary.org/isbn/{{props.properties.uid.first | slice:-13,13}}">{{props.properties.name.first}}</a> by {{props.properties.author.first}}
     </p>
     {% endfor %}
   {% endif %}
