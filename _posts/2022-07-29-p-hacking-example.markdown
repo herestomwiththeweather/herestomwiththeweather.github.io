@@ -1,6 +1,7 @@
 ---
 title: "P-Hacking Example"
 layout: post
+image: https://coffeebucks.s3.amazonaws.com/nope_not_how_it_works.jpg
 date: 2022-07-29 21:09:37
 ---
 One of the most interesting lessons from the pandemic is the harm that can be caused by [p-hacking](https://en.wikipedia.org/wiki/Data_dredging).  A paper with errors related to p-hacking that hasn't been peer-reviewed is promoted by one or more people with millions of followers on social media and then some of those followers suffer horrible outcomes because they had a false sense of security.  Maybe the authors of the paper did not even realize the problem but for whatever reason, the social media rock stars felt the need to spread the misinformation.  And another very interesting lesson is that the social media rock stars seem to almost never issue a correction after the paper is reviewed and rejected.
