@@ -1,6 +1,7 @@
 ---
 title: "The First Shots"
 layout: post
+image: https://coffeebucks.s3.amazonaws.com/the_first_shots.jpg
 date: 2022-01-07 17:49:10
 ---
 ![The First Shots](https://coffeebucks.s3.amazonaws.com/the_first_shots.jpg)
