@@ -14,6 +14,7 @@ permalink: pretty
 # Webmentions - leave blank (remove "yes") if you would not like to receive & display webmentions from other sites
 webmentions: yes
 
+include: ['/.well-known']
 exclude:
   - vendor
 
