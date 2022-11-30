@@ -1,0 +1,11 @@
+{
+  "subject": "acct:tom@herestomwiththeweather.com",
+
+  "links": [
+    {
+      "rel": "self",
+      "type": "application/activity+json",
+      "href": "https://herestomwiththeweather/actor"
+    }
+   ]
+}
