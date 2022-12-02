@@ -4,7 +4,6 @@
 
 		<p>{{ site.description }}</p>
 		<ul class="soc">
-			{% include icon-mastodon.html %}
 			{% if site.goodreads_username %}
 				{% include icon-goodreads.html %}
 			{% endif %}
@@ -14,6 +13,7 @@
 		 	{% if site.github_username %}
 				{% include icon-github.html %}
 			{% endif %}
+			{% include icon-mastodon.html %}
 			{% if site.linkedin_url %}
 				{% include icon-linkedin.html %}
 			{% endif %}
