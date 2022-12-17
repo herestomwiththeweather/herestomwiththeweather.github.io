@@ -1,5 +1,5 @@
 {
-  "subject": "acct:herestomwiththeweather@mastodon.social",
+  "subject": "acct:tom@herestomwiththeweather.com",
   "aliases": ["https://mastodon.social/@herestomwiththeweather", "https://mastodon.social/users/herestomwiththeweather"],
   "links": [
   {"rel": "http://webfinger.net/rel/profile-page", "type": "text/html", "href": "https://mastodon.social/@herestomwiththeweather"},
