@@ -1,0 +1,7 @@
+---
+title: "Social Web 101"
+layout: post
+date: 2023-12-28 18:51:10
+---
+Whether it's the [Indieweb](https://en.wikipedia.org/wiki/IndieWeb) or the [Fediverse](https://en.wikipedia.org/wiki/Fediverse), you should not expect to be able to make a reply or do anything else other than view posts on someone else's domain (e.g. example.com).  If you end up on someone else's domain and wish to interact with them, in general, you should hop back to your site or app and interact with them from there.  It's like riding a bike and you'll soon forget it was ever a challenge.
+
