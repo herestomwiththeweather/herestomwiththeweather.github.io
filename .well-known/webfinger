@@ -1,9 +1,7 @@
 {
   "subject": "acct:tom@herestomwiththeweather.com",
-  "aliases": ["https://mastodon.social/@herestomwiththeweather", "https://mastodon.social/users/herestomwiththeweather"],
   "links": [
-  {"rel": "http://webfinger.net/rel/profile-page", "type": "text/html", "href": "https://mastodon.social/@herestomwiththeweather"},
-   {"rel": "self", "type": "application/activity+json", "href": "https://mastodon.social/users/herestomwiththeweather"},
-   {"rel": "http://ostatus.org/schema/1.0/subscribe", "template": "https://mastodon.social/authorize_interaction?uri={uri}"}
+  {"rel": "http://webfinger.net/rel/profile-page", "type": "text/html", "href": "https://herestomwiththeweather.com"},
+   {"rel": "self", "type": "application/activity+json", "href": "https://otisburg.social/actor/tom@herestomwiththeweather.com"}
   ]
 }
