@@ -15,7 +15,7 @@ Second, I didn't adequately prepare for the possibility that some of my follower
 
 Otherwise, the move went well and it is a great feature and I'm glad to see [an effort underway to standardize it](https://w3c.github.io/activitypub/data-portability-report.html).
 
-One unresolved issue is that when someone visits my profile on a mastodon site, selecting "open original page" will fetch **https://otisburg.social/actor/tom@herestomwiththeweather.com** and the user would expect to see my status updates or toots or whatever you call them.  However, currently that url redirects to this website and activitypub status updates are not available here.  Since this website supports [micropub](https://indieweb.org/Micropub), my posts from otisburg could also be sent here but that might introduce more complexity than desirable.
+One unresolved issue is that when someone visits my profile on a mastodon site, selecting "open original page" will fetch **https://otisburg.social/actor/tom@herestomwiththeweather.com** and the user would expect to see my status updates or toots or whatever you call them.  However, currently that url redirects to this website and activitypub status updates are not available here.
 
 
 
