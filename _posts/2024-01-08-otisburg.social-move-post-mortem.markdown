@@ -1,0 +1,21 @@
+---
+title: "Otisburg.social move post-mortem"
+layout: post
+date: 2024-01-08 00:38:16
+---
+I moved my account from [@herestomwiththeweather@mastodon.social](https://mastodon.social/@herestomwiththeweather) to [@tom@herestomwiththeweather.com](https://otisburg.social/actor/tom@herestomwiththeweather.com) on January 2nd.  In the spirit of learning from [post-mortems](https://github.com/danluu/post-mortems/), I am documenting a few mistakes I made.
+
+One of the main motivations for the move was that [over a year ago](https://github.com/herestomwiththeweather/herestomwiththeweather.github.io/commit/16a5882581d2bfb044a6537a629033698adc80a7), I had configured webfinger on this site to point to the account I had on [mastodon.social](https://mastodon.social/). But once someone has found me on mastodon, I would from then on be known by my mastodon identifier rather than the identifier with my personal domain.  If I lost access to that particular mastodon account for whatever reason, I would be unreachable by that mastodon identifier.  However, as I described in [Webfinger Expectations](https://herestomwiththeweather.com/2023/09/22/webfinger-expectations/), if my webfinger configuration points me to a server that will allow me to participate on the [fediverse](https://en.wikipedia.org/wiki/Fediverse) with my own personal identifier using my own domain, then in theory, if I lose access to the account on that server, I can swap it out with another similar server and be reachable again with my personal identifier.  So, last week [I moved](https://docs.joinmastodon.org/user/moving/) to [Otisburg.social](https://otisburg.social) which is running what I consider a minimum viable activitypub server called [Irwin](https://github.com/herestomwiththeweather/irwin).  As it is experimental, I am the only user on the server.
+
+So what did I screw up?  I didn't plan for two things.  Both are related to the diversity of software and configurations on the Fediverse.
+
+First, although I was vaguely aware of the optional [Authorized Fetch](https://docs.joinmastodon.org/admin/config/#authorized_fetch) mastodon feature, I didn't anticipate that it would prevent me from re-following some of my followers.  Prior to the migration, I assumed this feature would not be enabled on any of the servers the people I followed were using.  I quickly realized that I could not re-follow people on 3 servers which had this feature enabled.  So, I lost contact with the people on those servers for a few days until I [fixed it](https://github.com/herestomwiththeweather/irwin/commit/ba5bd101a5870c50fef8c0312118ae792e85f20e) by also signing GET requests in addition to POST requests.
+
+Second, I didn't adequately prepare for the possibility that some of my followers would not automatically move to the new server.  Of 96 followers, I had about 15 that did not successfully re-follow.  It seems that some of these failed because they were not on a Mastodon server and their server did not adequately handle the [Move](https://docs.joinmastodon.org/spec/activitypub/#Move) activity sent by mastodon.social.  Unfortunately, although mastodon allowed me to download a csv file of the people I followed, it did not provide a link to download a file of followers so I don't know everyone I lost during the move.
+
+Otherwise, the move went well and it is a great feature and I'm glad to see [an effort underway to standardize it](https://w3c.github.io/activitypub/data-portability-report.html).
+
+One unresolved issue is that when someone visits my profile on a mastodon site, selecting "open original page" will fetch **https://otisburg.social/actor/tom@herestomwiththeweather.com** and the user would expect to see my status updates or toots or whatever you call them.  However, currently that url redirects to this website and activitypub status updates are not available here.  Since this website supports [micropub](https://indieweb.org/Micropub), my posts from otisburg could also be sent here but that might introduce more complexity than desirable.
+
+
+
