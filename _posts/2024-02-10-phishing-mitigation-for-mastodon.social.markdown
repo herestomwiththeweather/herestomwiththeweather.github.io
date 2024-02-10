@@ -1,0 +1,10 @@
+---
+title: "Phishing Mitigation for Mastodon.social"
+layout: post
+date: 2024-02-10 15:55:35
+---
+When a person is already logged into a [mastodon](https://en.wikipedia.org/wiki/Mastodon_(social_network)) instance, if they visit some pages on their instance associated with a user from another server, they are not redirected to the remote server because it is easier to interact with the remote user with their existing local session.  However, if a person without an account is just visiting or they have an account but are logged out, mastodon redirects them to the remote server presumably because mastodon doesn't know whether they have a local account and visiting the remote server will have the complete and authoritative data for that remote user.
+ 
+A welcome update to [mastodon.social](https://mastodon.social) (included in 4.3.0-nightly) is a [warning](https://mastodon.social/@Gargron/111908524315478487) presented to visitors or logged out users before mastodon redirects them to a remote server for the original page.  The [code](https://github.com/mastodon/mastodon/commit/b19ae521b7d28a76e8e1d8da8157e051e9d8de6c) for [Add confirmation when redirecting logged-out requests to permalink](https://github.com/mastodon/mastodon/pull/27792) is particularly relevant to mastodon.social compared to other fediverse instances as mastodon.social has become a relatively big target for phishing.  It's a good bet that if someone is navigating the fediverse that their account is on mastodon.social.  So, if an arbitrary victim is logged out of their mastodon.social account and visits a mastodon.social page belonging to the attacker, prior to this mitigation, mastodon.social would automatically redirect the victim to the attacker's page which might be a fake login form to trick the victim into submitting their login credentials to the attacker's site.  Unfortunately, a significant percentage of people will submit the form.
+
+One could imagine mastodon.social maintaining a list of trusted servers for automatic redirects but that would be an undesirable hornet's nest and it's not a bad thing when web surfers are conscious of the trust boundaries on the web.
