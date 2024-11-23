@@ -1,0 +1,3 @@
+/social/:year/:month/:day/:id application/activity+json https://irwin.ngrok.io/statuses/:id 301!
+/social/:year/:month/:day/:id application/json https://irwin.ngrok.io/statuses/:id 301!
+/social/:year/:month/:day/:id application/ld+json https://irwin.ngrok.io/statuses/:id 301!
