@@ -1,0 +1,107 @@
+---
+layout: page
+title: Fediverse Posts
+---
+
+<div id="fediverse-posts">
+  <p>Loading posts...</p>
+</div>
+
+<style>
+.fediverse-post {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #ccc;
+}
+.fediverse-post:last-child {
+  border-bottom: none;
+}
+.fediverse-post-content {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+.fediverse-post-meta {
+  font-size: 0.9rem;
+  color: #666;
+}
+.fediverse-post-meta a {
+  color: #666;
+}
+.fediverse-error {
+  color: #c60000;
+  padding: 1rem;
+  background: #fee;
+  border-radius: 4px;
+}
+</style>
+
+<script>
+(function() {
+  const feedUrl = 'https://otisburg.social/actor/tom@herestomwiththeweather.com.xml';
+  const container = document.getElementById('fediverse-posts');
+
+  function formatDate(dateStr) {
+    const date = new Date(dateStr);
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit'
+    });
+  }
+
+  function renderPosts(items) {
+    if (items.length === 0) {
+      container.innerHTML = '<p>No posts found.</p>';
+      return;
+    }
+
+    const html = items.map(item => {
+      const title = item.querySelector('title')?.textContent || '';
+      const description = item.querySelector('description')?.textContent || title;
+      const link = item.querySelector('link')?.textContent || '#';
+      const pubDate = item.querySelector('pubDate')?.textContent || '';
+
+      // Use description if it's longer, otherwise title
+      const content = description.length > title.length ? description : title;
+
+      return `
+        <article class="fediverse-post">
+          <div class="fediverse-post-content">${content}</div>
+          <div class="fediverse-post-meta">
+            <time datetime="${pubDate}">${formatDate(pubDate)}</time>
+            &middot;
+            <a href="${link}" target="_blank" rel="noopener">View on Fediverse</a>
+          </div>
+        </article>
+      `;
+    }).join('');
+
+    container.innerHTML = html;
+  }
+
+  function showError(message) {
+    container.innerHTML = `<div class="fediverse-error">${message}</div>`;
+  }
+
+  fetch(feedUrl)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Failed to fetch feed');
+      }
+      return response.text();
+    })
+    .then(text => {
+      const parser = new DOMParser();
+      const xml = parser.parseFromString(text, 'application/xml');
+      const items = xml.querySelectorAll('item');
+      renderPosts(Array.from(items));
+    })
+    .catch(error => {
+      console.error('Error fetching feed:', error);
+      showError(`Unable to load posts. <a href="${feedUrl}" target="_blank">View the feed directly</a>.`);
+    });
+})();
+</script>
