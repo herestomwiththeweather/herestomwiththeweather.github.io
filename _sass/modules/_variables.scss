@@ -1,3 +1,5 @@
+@use "sass:color";
+
 //Base colors
 $text-color: #333;
 $quiet-color: #ccc;
@@ -7,7 +9,7 @@ $white: #fff;
 $heading-color: #0b1a26;
 //Link colors
 $link-color: #c60000;
-$link-hover-color: saturate($link-color, 20%);
+$link-hover-color: color.adjust($link-color, $saturation: 20%);
 $link-visited-color: #333;
 // Font weights
 $light: 100;

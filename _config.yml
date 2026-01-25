@@ -34,7 +34,7 @@ author_img: https://stark-moon-46.s3.amazonaws.com/images/16299.jpg
 
 # Build settings
 markdown: kramdown
-gems:
+plugins:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-gist

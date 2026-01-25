@@ -1,5 +1,8 @@
+@use "sass:math";
+@use "variables" as *;
+
 @function calculate-rem($size) {
-  $rem-size: $size / 16px;
+  $rem-size: math.div($size, 16px);
 
   @return #{$rem-size}rem;
 }
@@ -21,7 +24,7 @@
   padding: 0.5*$padding-small $padding-large;
 
   @media (max-width: 1000px) {
-    padding: $padding-small * 1.5 $padding-large / 1.6;
+    padding: $padding-small * 1.5 math.div($padding-large, 1.6);
   }
 }
 
