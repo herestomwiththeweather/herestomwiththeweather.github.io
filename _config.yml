@@ -25,12 +25,14 @@ github_username: herestomwiththeweather
 flickr_username: tbbrown
 goodreads_username: 656838-tom-brown
 keybase_username: tbbrown
+webfinger_identifier: "@tom@herestomwiththeweather.com"
 
 # Can be over ridden with author: in Front Matter
 author: Tom
 
 # Expecting a full url, not relative to site.url
 author_img: https://stark-moon-46.s3.amazonaws.com/images/16299.jpg
+fediverse_rss: https://otisburg.social/actor/tom@herestomwiththeweather.com.xml
 
 # Build settings
 markdown: kramdown

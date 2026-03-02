@@ -4,7 +4,7 @@ title: Fediverse Posts
 ---
 
 <p class="fediverse-follow">
-  Follow me on the Fediverse: <strong>@tom@herestomwiththeweather.com</strong>
+Follow me on the Fediverse: <strong>{{ site.webfinger_identifier }}</strong>
 </p>
 
 <div id="fediverse-posts">
@@ -52,7 +52,7 @@ title: Fediverse Posts
 
 <script>
 (function() {
-  const feedUrl = 'https://otisburg.social/actor/tom@herestomwiththeweather.com.xml';
+  const feedUrl = '{{ site.fediverse_rss }}';
   const container = document.getElementById('fediverse-posts');
 
   function formatDate(dateStr) {
