@@ -2,6 +2,8 @@
   "subject": "acct:tom@herestomwiththeweather.com",
   "links": [
   {"rel": "http://webfinger.net/rel/profile-page", "type": "text/html", "href": "https://herestomwiththeweather.com"},
-   {"rel": "self", "type": "application/activity+json", "href": "https://otisburg.social/actor/tom@herestomwiththeweather.com"}
+   {"rel": "self", "type": "application/activity+json", "href": "https://otisburg.social/actor/tom@herestomwiththeweather.com"},
+   {"rel": "https://w3id.org/fep/3b86/Follow", "template": "https://otisburg.social/authorize_interaction?uri={object}"},
+   {"rel": "https://w3id.org/fep/3b86/Like", "template": "https://otisburg.social/intents/like?objectId={object}"}
   ]
 }
