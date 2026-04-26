@@ -32,6 +32,7 @@ author: Tom
 
 # Expecting a full url, not relative to site.url
 author_img: https://stark-moon-46.s3.amazonaws.com/images/16299.jpg
+fediverse_actor: https://otisburg.social/actor/tom@herestomwiththeweather.com
 fediverse_rss: https://otisburg.social/actor/tom@herestomwiththeweather.com.xml
 
 # Build settings

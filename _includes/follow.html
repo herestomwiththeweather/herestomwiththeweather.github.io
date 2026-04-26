@@ -1,0 +1,60 @@
+<button id="follow-btn" style="font-size:1.1em;cursor:pointer;">Follow me on the Fediverse</button>
+
+<dialog id="follow-dialog">
+  <p>Sign in to continue</p>
+  <form id="follow-form">
+    <input id="webfinger-input" type="text" placeholder="you@yourserver.social" required>
+    <button type="submit">Continue</button>
+    <button type="button" id="follow-cancel">Cancel</button>
+  </form>
+  <p id="follow-error" style="color:red;display:none;"></p>
+</dialog>
+
+<script>
+(function() {
+  var actor = '{{ site.fediverse_actor }}';
+
+  document.getElementById('follow-btn').addEventListener('click', function() {
+    document.getElementById('follow-error').style.display = 'none';
+    document.getElementById('follow-dialog').showModal();
+  });
+
+  document.getElementById('follow-cancel').addEventListener('click', function() {
+    document.getElementById('webfinger-input').value = '';
+    document.getElementById('follow-dialog').close();
+  });
+
+  document.getElementById('follow-form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    var address = document.getElementById('webfinger-input').value.trim();
+    var match = address.match(/^@?([^@]+)@(.+)$/);
+    if (!match) {
+      showError('Please enter a valid fediverse address.');
+      return;
+    }
+    var user = match[1], host = match[2];
+    var resource = 'acct:' + user + '@' + host;
+    var url = 'https://' + host + '/.well-known/webfinger?resource=' + encodeURIComponent(resource);
+    try {
+      var resp = await fetch(url, { headers: { 'Accept': 'application/jrd+json, application/json' } });
+      if (!resp.ok) { showError('Server returned ' + resp.status); return; }
+      var data = await resp.json();
+      var rels = ['https://w3id.org/fep/3b86/Follow', 'https://w3id.org/fep/3b86/Object'];
+      var link = (data.links || []).find(function(l) { return rels.includes(l.rel); });
+      if (!link || !link.template) {
+        showError('Your server does not support remote follows (FEP-3b86).');
+        return;
+      }
+      window.location.href = link.template.replace('{object}', encodeURIComponent(actor));
+    } catch(err) {
+      showError('Could not reach your server: ' + err.message);
+    }
+  });
+
+  function showError(msg) {
+    var el = document.getElementById('follow-error');
+    el.textContent = msg;
+    el.style.display = 'block';
+  }
+})();
+</script>
