@@ -1,0 +1,14 @@
+---
+title: "AI Fail"
+layout: post
+date: 2026-04-27 17:02:14
+---
+A significant github issue was opened a few days ago by [luckygreen](https://github.com/luckygreen):
+
+[[BUG][SECURITY] CLAUDE.md/AGENTS.md instruction compliance is architecturally unenforced — documented security consequences and 10+ independent reports #53223](https://github.com/anthropics/claude-code/issues/53223)
+
+Claude code allows a project to declare persistent context and instructions to control Claude Code's behavior in a file named CLAUDE.md. It seems that these instructions defined the the CLAUDE.md file can be silently overriden if they conflict with Claude's internal instructions.
+
+The issue references at least 10 other issues that belong to this same class of failure.
+
+Clearly, at the very least, the failure should not be silent and Claude should stop before proceeding any further with an alert so that the problem can be managed.
