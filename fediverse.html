@@ -4,8 +4,9 @@ title: Fediverse Posts
 ---
 
 <p class="fediverse-follow">
-Follow me on the Fediverse: <strong>{{ site.webfinger_identifier }}</strong>
+  <strong>{{ site.webfinger_identifier }}</strong>
 </p>
+{% include follow.html %}
 
 <div id="fediverse-posts">
   <p>Loading posts...</p>
