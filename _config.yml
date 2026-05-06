@@ -41,6 +41,7 @@ plugins:
   - jekyll-paginate
   - jekyll-seo-tag
   - jekyll-gist
+  - jekyll-sitemap
 
 paginate: 5
 post:
