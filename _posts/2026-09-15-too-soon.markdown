@@ -1,0 +1,33 @@
+---
+title: "Too Soon"
+layout: post
+date: 2026-09-15 15:47:21
+---
+{% include youtubePlayer.html id='_7eoZt-bUSI' %}
+
+[Too Soon: Comedy After 9/11](https://en.wikipedia.org/wiki/Too_Soon:_Comedy_After_9/11) is an excellent documentary about comedy just after September 11, 2001.
+
+> There's the adage "Comedy equals tragedy plus time" which is pretty much the Onion's operating principle but we basically skip the time part.
+
+Comedians that genuinely wanted to do the right thing took cues from each other (including Letterman's 09/17 return) on how to navigate the very challenging new territory in the midst of intimidation and threats of violence.
+
+The comment that Bill Maher lost his job over:
+
+> We have been the cowards. Lobbing cruise missiles from 2000 miles away. That's cowardly. Staying in the airplane when it hits the building. Say what you want about it. Not cowardly.
+
+...was followed by the White House press secretary delivering the warning:
+
+>  all Americans...that they need to watch what they say, watch what they do. This is not a time for remarks like that; there never is.
+
+Although not included in the documentary, it seems the press secretary strangely wrote a letter to the Washington Post to [deny making those remarks](https://www.washingtonpost.com/archive/opinions/2009/05/24/a-white-house-spokesmans-urban-myth/7ed3fc5a-6a1b-4447-92b3-10d0bbceb7d6/):
+
+> Ari Fleischer hasn't been seen much since he stepped down as White House press secretary in 2003 and moved out of the public spotlight. So it was a surprise when he e-mailed recently asking The Post to "correct the record" on a comment he made nearly eight years ago.  Fleischer, now a sports media consultant in New York, said that Post columnist Dana Milbank was guilty of repeating an "old canard" that has become an "urban myth."
+
+Also not included were any conversations related to the provenance of Maher's comments.  For instance, in [Re: Hicks, Rogan and Leary mentioned on Stern, NY Post](https://www.usenet-rewind.com/message/QkI5RTM4Q0EuMkIxNkElY29tZWR5amNAaG90bWFpbC5ERUxFVEVUSElTLmNvbQ), different opinions were shared on how similar Maher's comments were to those from the November 17, 1993 performance of Bill Hicks:
+
+> They blow themselves up in order to get at us, and we launch $3 million missiles off of giant floating iron islands 2000 miles away - Who are the real cowards?
+
+They seem very similar but I do not think Maher was necessarily borrowing from Hicks.
+
+In the end, what I learned was that there was a lot of self-censorship and we missed out on a lot of good humor that could have been helpful.
+
