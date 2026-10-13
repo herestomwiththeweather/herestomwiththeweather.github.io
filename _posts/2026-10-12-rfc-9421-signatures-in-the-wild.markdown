@@ -7,7 +7,7 @@ Like many others building software that communicates with servers on the Fediver
 
 > We now emit RFC 9421 signatures when requests fail using the previous draft specification, allowing compatibility between Mastodon 4.7 and servers that only implement the final RFC 9421 specification, while retaining compatibility with servers that only implement the previous draft specification
 
-So, in September, I updated [Irwin](https://github.com/herestomwiththeweather/irwin) to [process incoming RFC 9421 signatures](https://github.com/herestomwiththeweather/irwin/issues/92).  However, because Irwin supports both legacy and standard signatures, the Mastodon 4.7 severs keep sending Irwin the legacy signatures but this is a post about RFC 9421 signatures in the wild, so where are they coming from?
+So, in September, I updated [Irwin](https://github.com/herestomwiththeweather/irwin) to [process incoming RFC 9421 signatures](https://github.com/herestomwiththeweather/irwin/issues/92).  However, because Irwin supports both legacy and standard signatures, the Mastodon 4.7 servers keep sending Irwin the legacy signatures but this is a post about RFC 9421 signatures in the wild, so where are they coming from?
 
 In new versions of WordPress, [RFC 9421 is on by default](https://github.com/swicg/activitypub-http-signature/pull/71).  I am seeing several WordPress sites send them but here is one example request from [socialwebfoundation.org](https://socialwebfoundation.org) in the Irwin logs showing the ```signature-input``` request header which is a request header that does not exist in the legacy signatures:
 
